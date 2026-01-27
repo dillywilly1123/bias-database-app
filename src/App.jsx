@@ -34,10 +34,11 @@ function App() {
       if (!matchesSearch) return false
 
       if (filter === 'all') return true
-      const { lean } = parseScore(person.score)
-      if (filter === 'left') return lean === 'D'
-      if (filter === 'right') return lean === 'R'
-      if (filter === 'center') return lean === 'C'
+      const { value, lean } = parseScore(person.score)
+      const isCenter = lean === 'C' || value < 10
+      if (filter === 'left') return lean === 'D' && !isCenter
+      if (filter === 'right') return lean === 'R' && !isCenter
+      if (filter === 'center') return isCenter
       return true
     })
   }, [data, search, filter])
@@ -73,7 +74,7 @@ function App() {
         </div>
       </header>
 
-      <main className="max-w-6xl mx-auto px-4 py-8 space-y-8">
+      <main className="max-w-7xl mx-auto px-4 py-8 space-y-8">
         {/* Bias Spectrum */}
         <BiasSpectrum data={data} onSelect={setSelected} />
 
@@ -91,7 +92,7 @@ function App() {
         </p>
 
         {/* Card Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {filtered.map((person) => (
             <CommentatorCard
               key={person.id}

@@ -22,9 +22,22 @@ export default function CommentatorCard({ person, onClick }) {
           </h3>
         </div>
       </div>
-      <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 mb-3">
-        {person.strongestBeliefs}
-      </p>
+      <div className="space-y-2 mb-4">
+        <div>
+          <h4 className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-0.5">Strongest Beliefs</h4>
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+            {person.strongestBeliefs}
+          </p>
+        </div>
+        {person.commonThemes && (
+          <div>
+            <h4 className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-0.5">Common Themes</h4>
+            <p className="text-sm text-gray-600 dark:text-gray-300">
+              {person.commonThemes}
+            </p>
+          </div>
+        )}
+      </div>
       <MetricsBadges person={person} compact />
       <div className="mt-3 text-sm font-medium text-blue-600 dark:text-blue-400 flex items-center gap-1">
         View Profile
