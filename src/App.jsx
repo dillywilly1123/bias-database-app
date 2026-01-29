@@ -5,6 +5,7 @@ import CommentatorModal from './components/CommentatorModal'
 import SearchBar from './components/SearchBar'
 import FilterTabs from './components/FilterTabs'
 import { parseScore } from './components/ScoreBadge'
+import { Analytics } from '@vercel/analytics/react'
 
 function App() {
   const [data, setData] = useState([])
@@ -44,6 +45,8 @@ function App() {
   }, [data, search, filter])
 
   return (
+    <>
+    <Analytics />
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 transition-colors">
       {/* Header */}
       <header className="border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
@@ -119,6 +122,7 @@ function App() {
         />
       )}
     </div>
+    </>
   )
 }
 
