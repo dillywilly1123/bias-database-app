@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
 import ScoreBadge, { getLeanLabel } from './ScoreBadge'
 import Headshot from './Headshot'
-import MetricsBadges from './MetricsBadges'
+import LatestContent from './LatestContent'
 
-export default function CommentatorModal({ person, onClose }) {
+export default function CommentatorModal({ person, latestContent, onClose }) {
   useEffect(() => {
     const handleEsc = (e) => {
       if (e.key === 'Escape') onClose()
@@ -58,11 +58,6 @@ export default function CommentatorModal({ person, onClose }) {
             </div>
           </div>
 
-          {/* Metrics */}
-          <MetricsBadges person={person} />
-
-          <hr className="border-gray-200 dark:border-gray-700 my-6" />
-
           {/* Sections */}
           <section className="mb-6">
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-2">
@@ -90,6 +85,18 @@ export default function CommentatorModal({ person, onClose }) {
               {person.audienceProfile}
             </p>
           </section>
+
+          {latestContent && (latestContent.youtubeVideo || latestContent.substackArticle) && (
+            <>
+              <hr className="border-gray-200 dark:border-gray-700 my-6" />
+              <section>
+                <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-3">
+                  Latest Content
+                </h3>
+                <LatestContent data={latestContent} />
+              </section>
+            </>
+          )}
 
           {(person.xUrl || person.youtubeUrl || person.substackUrl || person.instagramUrl || person.tiktokUrl) && (
             <>

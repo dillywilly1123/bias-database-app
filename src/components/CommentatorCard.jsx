@@ -1,8 +1,8 @@
 import ScoreBadge, { getLeanLabel } from './ScoreBadge'
 import Headshot from './Headshot'
-import MetricsBadges from './MetricsBadges'
+import LatestContent from './LatestContent'
 
-export default function CommentatorCard({ person, onClick }) {
+export default function CommentatorCard({ person, latestContent, onClick }) {
   return (
     <button
       onClick={onClick}
@@ -38,7 +38,7 @@ export default function CommentatorCard({ person, onClick }) {
           </div>
         )}
       </div>
-      <MetricsBadges person={person} compact />
+      <LatestContent data={latestContent} compact />
       {(person.xUrl || person.youtubeUrl || person.substackUrl || person.instagramUrl || person.tiktokUrl) && (
         <div className="flex gap-2 mt-3" onClick={(e) => e.stopPropagation()}>
           {person.xUrl && (

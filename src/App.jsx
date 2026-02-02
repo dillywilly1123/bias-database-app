@@ -5,6 +5,7 @@ import CommentatorModal from './components/CommentatorModal'
 import SearchBar from './components/SearchBar'
 import FilterTabs from './components/FilterTabs'
 import { parseScore } from './components/ScoreBadge'
+import useLatestContent from './hooks/useLatestContent'
 import { Analytics } from '@vercel/analytics/react'
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
   useEffect(() => {
     document.documentElement.classList.toggle('dark', darkMode)
   }, [darkMode])
+
+  const { content: latestContent } = useLatestContent(data)
 
   const filtered = useMemo(() => {
     return data.filter((person) => {
@@ -100,6 +103,7 @@ function App() {
             <CommentatorCard
               key={person.id}
               person={person}
+              latestContent={latestContent[person.id]}
               onClick={() => setSelected(person)}
             />
           ))}
@@ -118,6 +122,7 @@ function App() {
       {selected && (
         <CommentatorModal
           person={selected}
+          latestContent={latestContent[selected.id]}
           onClose={() => setSelected(null)}
         />
       )}
