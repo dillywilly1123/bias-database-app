@@ -3,29 +3,40 @@ import { useState, useEffect } from 'react'
 const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY
 const CORS_PROXY = 'https://api.allorigins.win/raw?url='
 
-function extractYoutubeHandle(url) {
+function extractYoutubeInfo(url) {
   if (!url) return null
-  const match = url.match(/youtube\.com\/@([^/?]+)/)
-  return match ? match[1] : null
+  const handleMatch = url.match(/youtube\.com\/@([^/?]+)/)
+  if (handleMatch) return { type: 'handle', value: handleMatch[1] }
+  const channelMatch = url.match(/youtube\.com\/channel\/([^/?]+)/)
+  if (channelMatch) return { type: 'channelId', value: channelMatch[1] }
+  return null
 }
 
-function extractSubstackDomain(url) {
+function extractFeedUrl(url) {
   if (!url) return null
-  const match = url.match(/https?:\/\/([^/]+\.substack\.com)/)
-  return match ? match[1] : null
+  try {
+    const u = new URL(url)
+    return `${u.origin}/feed`
+  } catch {
+    return null
+  }
 }
 
 async function fetchYoutubeVideo(youtubeUrl) {
   if (!YOUTUBE_API_KEY) return null
-  const handle = extractYoutubeHandle(youtubeUrl)
-  if (!handle) return null
+  const info = extractYoutubeInfo(youtubeUrl)
+  if (!info) return null
 
-  // Resolve handle to channel ID
-  const channelRes = await fetch(
-    `https://www.googleapis.com/youtube/v3/channels?forHandle=${handle}&part=id&key=${YOUTUBE_API_KEY}`
-  )
-  const channelData = await channelRes.json()
-  const channelId = channelData.items?.[0]?.id
+  let channelId
+  if (info.type === 'channelId') {
+    channelId = info.value
+  } else {
+    const channelRes = await fetch(
+      `https://www.googleapis.com/youtube/v3/channels?forHandle=${info.value}&part=id&key=${YOUTUBE_API_KEY}`
+    )
+    const channelData = await channelRes.json()
+    channelId = channelData.items?.[0]?.id
+  }
   if (!channelId) return null
 
   // Get latest video
@@ -46,10 +57,8 @@ async function fetchYoutubeVideo(youtubeUrl) {
 }
 
 async function fetchSubstackArticle(substackUrl) {
-  const domain = extractSubstackDomain(substackUrl)
-  if (!domain) return null
-
-  const feedUrl = `https://${domain}/feed`
+  const feedUrl = extractFeedUrl(substackUrl)
+  if (!feedUrl) return null
   const res = await fetch(`${CORS_PROXY}${encodeURIComponent(feedUrl)}`)
   const text = await res.text()
 
