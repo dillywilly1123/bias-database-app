@@ -6,14 +6,15 @@
     "strongestBeliefs": "Institutional integrity, accountability for the Trump administration, and Gen-Z civic engagement.",
     "commonThemes": "Legal breakdowns of DOJ filings, January 6th updates, and \"pro-democracy\" messaging.",
     "audienceProfile": "Young Democrats, legal nerds, and \"Resistance\" Twitter/X veterans.",
-    "xFollowers": 322400,
-    "youtubeSubscribers": 513000,
-    "substackSubscribers": 676000,
-    "instagramFollowers": 2400000,
+    "xFollowers": null,
+    "youtubeSubscribers": null,
+    "substackSubscribers": null,
+    "instagramFollowers": null,
     "xUrl": "https://x.com/AaronParnas",
     "youtubeUrl": "https://www.youtube.com/@aaronparnas1",
     "substackUrl": "https://aaronparnas.substack.com/",
-    "instagramUrl": "https://www.instagram.com/aaronparnas"
+    "instagramUrl": "https://www.instagram.com/aaronparnas",
+    "tiktokUrl": "https://www.tiktok.com/@aaronparnas1?lang=en"
   },
   {
     "id": 2,
@@ -24,7 +25,8 @@
     "audienceProfile": "Conservative youth, traditionalist families, and libertarian-leaning Republicans.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 3,
@@ -35,7 +37,8 @@
     "audienceProfile": "\"Neo-liberals,\" tech founders, policy wonks, and San Francisco/NYC urbanites.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 4,
@@ -46,7 +49,8 @@
     "audienceProfile": "Viral video consumers, right-leaning Gen-Z, and critics of mainstream urban governance.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "audienceProfile": "Hyper-online Gen-Z/Millennials, fans of irony, and people disillusioned with polished news.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 6,
@@ -68,7 +73,8 @@
     "audienceProfile": "\"Rationalists,\" gamblers, and political junkies who prefer math over narratives.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 7,
@@ -79,7 +85,8 @@
     "audienceProfile": "Policy professionals, moderate Democrats, and \"YIMBY\" (Yes In My Backyard) advocates.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 8,
@@ -90,7 +97,8 @@
     "audienceProfile": "Disaffected liberals, \"intellectual dark web\" fans, and centrist conservatives.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 9,
@@ -101,7 +109,8 @@
     "audienceProfile": "Investigative journalism purists, civil libertarians, and skeptics of the \"Deep State\" from both sides.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 10,
@@ -112,7 +121,8 @@
     "audienceProfile": "Young professionals, retail investors, and people who find traditional financial news too dry or biased.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 11,
@@ -123,7 +133,8 @@
     "audienceProfile": "Political junkies, DC insiders, and readers who want to understand the \"game\" of politics without a moral lecture.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 12,
@@ -134,7 +145,8 @@
     "audienceProfile": "High-information Gen-Z/Millennials, \"Omniliberal\" fans, and people who enjoy intellectual combat and long-form Twitch/YouTube streams.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 13,
@@ -145,7 +157,8 @@
     "audienceProfile": "Economists, Silicon Valley founders, venture capitalists, and the \"intellectual curious\" who value data over partisan narratives.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 14,
@@ -156,7 +169,8 @@
     "audienceProfile": "Activists, corporate watchdog groups, and mainstream Democrats.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 15,
@@ -167,7 +181,8 @@
     "audienceProfile": "High-engagement Democratic voters and Gen-Z progressives.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 16,
@@ -178,7 +193,8 @@
     "audienceProfile": "Educated Boomers, history buffs, and institutional liberals.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 17,
@@ -189,7 +205,8 @@
     "audienceProfile": "Gen-Z/Gen-Alpha, Twitch streamers, and young socialists.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 18,
@@ -200,7 +217,8 @@
     "audienceProfile": "Secular progressives, logic-focused liberals, and podcast listeners.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 19,
@@ -211,7 +229,8 @@
     "audienceProfile": "X-power users, media critics, and anti-Trump conservatives/liberals.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 20,
@@ -222,7 +241,8 @@
     "audienceProfile": "Labor advocates, economics students, and progressive educators.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 21,
@@ -233,7 +253,8 @@
     "audienceProfile": "Disaffected young liberals and Bernie Sanders supporters.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 22,
@@ -244,7 +265,8 @@
     "audienceProfile": "Academics, the LGBTQ+ community, and YouTube video-essay enthusiasts.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 23,
@@ -255,7 +277,8 @@
     "audienceProfile": "High-energy Democratic activists and anti-MAGA voters.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 24,
@@ -266,7 +289,8 @@
     "audienceProfile": "Populist conservatives, rural Americans, and \"New Right\" skeptics.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 25,
@@ -277,7 +301,8 @@
     "audienceProfile": "Cultural conservatives, \"Blexit\" supporters, and conspiracy-adjacent skeptics.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 26,
@@ -288,7 +313,8 @@
     "audienceProfile": "Disaffected former liberals, libertarians, and \"prep-focused\" Gen-X/Millennials.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 27,
@@ -299,7 +325,8 @@
     "audienceProfile": "Policy wonks, conservative parents, and intellectual right-wingers.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 28,
@@ -310,7 +337,8 @@
     "audienceProfile": "Hardline social conservatives and traditionalist Christians.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 29,
@@ -321,7 +349,8 @@
     "audienceProfile": "UK/US conservatives, \"Intellectual Dark Web\" fans, and free-speech absolutists.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 30,
@@ -332,7 +361,8 @@
     "audienceProfile": "Silicon Valley libertarians, environmental skeptics, and investigative junkies.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 31,
@@ -343,7 +373,8 @@
     "audienceProfile": "Young conservative males and \"frat-style\" political fans.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 32,
@@ -354,7 +385,8 @@
     "audienceProfile": "Southern conservatives, church-goers, and establishment-leaning Republicans.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 33,
@@ -365,7 +397,8 @@
     "audienceProfile": "Global progressives, activists, and critics of mainstream Western media.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 34,
@@ -376,7 +409,8 @@
     "audienceProfile": "Disaffected liberals, civil libertarians, and \"anti-woke\" skeptics of both parties.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 35,
@@ -387,7 +421,8 @@
     "audienceProfile": "\"Legal nerds,\" mainstream Democrats, and followers of MSNBC.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 36,
@@ -398,7 +433,8 @@
     "audienceProfile": "Older liberals, Boomers, and people nostalgic for traditional \"Anchor\" journalism.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 37,
@@ -409,7 +445,8 @@
     "audienceProfile": "Never-Trump Republicans, Lincoln Project supporters, and high-engagement Democrats.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 38,
@@ -420,7 +457,8 @@
     "audienceProfile": "Intellectual conservatives, \"Old School\" liberals, and people who dislike identity politics.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 39,
@@ -431,7 +469,8 @@
     "audienceProfile": "Trans rights activists, policy researchers, and the LGBTQ+ community.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 40,
@@ -442,7 +481,8 @@
     "audienceProfile": "Democratic staffers, \"Pod Save America\" fans, and partisan activists.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 41,
@@ -453,7 +493,8 @@
     "audienceProfile": "Dedicated anti-Trump voters and fans of psychological political analysis.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 42,
@@ -464,7 +505,8 @@
     "audienceProfile": "Hardcore anti-MAGA activists and strategy-minded Democrats.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 43,
@@ -475,7 +517,8 @@
     "audienceProfile": "\"Resistance\" Twitter/X base and enthusiasts of complex political investigations.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 44,
@@ -486,7 +529,8 @@
     "audienceProfile": "Anti-war activists, investigative purists, and skeptics of the CIA/FBI.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 45,
@@ -497,7 +541,8 @@
     "audienceProfile": "Progressive Jewish Americans, foreign policy academics, and liberal Zionism critics.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 46,
@@ -508,7 +553,8 @@
     "audienceProfile": "Unions, progressive activists, and long-time fans of his documentary work.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 47,
@@ -519,7 +565,8 @@
     "audienceProfile": "\"Heterodox\" intellectuals, Black conservatives, and critics of DEI.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 48,
@@ -530,7 +577,8 @@
     "audienceProfile": "MAGA activists, election skeptics, and hard-right legal observers.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 49,
@@ -541,7 +589,8 @@
     "audienceProfile": "Silicon Valley \"Effective Accelerationists,\" New Right intellectuals, and policy wonks.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 50,
@@ -552,7 +601,8 @@
     "audienceProfile": "Labor organizers, journalists, and socialist-leaning Millennials.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 51,
@@ -563,7 +613,8 @@
     "audienceProfile": "Moderate Republicans, \"Deep State\" defenders, and centrist Democrats.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 52,
@@ -574,7 +625,8 @@
     "audienceProfile": "Former Democrats, culture-war observers, and critics of \"woke\" Hollywood.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 53,
@@ -585,7 +637,8 @@
     "audienceProfile": "Never-Trump Republicans, moderate Democrats, and DC establishment types.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 54,
@@ -596,7 +649,8 @@
     "audienceProfile": "Disaffected center-right voters and mainstream liberals.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 55,
@@ -607,7 +661,8 @@
     "audienceProfile": "Liberal economists, academics, and readers of The New York Times.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 56,
@@ -618,7 +673,8 @@
     "audienceProfile": "Educators, parents, and people looking for a detox from partisan screaming.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 57,
@@ -629,7 +685,8 @@
     "audienceProfile": "High-intensity anti-MAGA activists and \"The Lincoln Project\" fans.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 58,
@@ -640,7 +697,8 @@
     "audienceProfile": "Moderate Republicans and patriotic-leaning Democrats.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 59,
@@ -651,7 +709,8 @@
     "audienceProfile": "YIMBYs, Silicon Valley progressives, and policy-oriented \"wonks.\"",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 60,
@@ -662,7 +721,8 @@
     "audienceProfile": "Progressive legal observers and highly active Democratic voters.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 61,
@@ -673,21 +733,11 @@
     "audienceProfile": "Grassroots Democratic organizers and \"hopeful\" progressives.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
     "id": 62,
-    "name": "Dan Pfeiffer",
-    "score": "46D",
-    "strongestBeliefs": "Strategic communication and reclaiming the \"digital airwaves\" from the right.",
-    "commonThemes": "Campaign post-mortems, polling analysis, and advice on how to talk to family about politics.",
-    "audienceProfile": "\"Pod Save America\" listeners and Democratic campaign staffers.",
-    "xFollowers": null,
-    "youtubeSubscribers": null,
-    "substackSubscribers": null
-  },
-  {
-    "id": 63,
     "name": "Simon Rosenberg",
     "score": "47D",
     "strongestBeliefs": "Data-driven optimism and the strength of the \"Democratic brand.\"",
@@ -695,10 +745,11 @@
     "audienceProfile": "Democratic party cheerleaders and data-minded progressives.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 64,
+    "id": 63,
     "name": "Jonathan Larsen",
     "score": "40D",
     "strongestBeliefs": "Unvarnished truth-telling without the \"politeness\" of corporate media.",
@@ -706,21 +757,11 @@
     "audienceProfile": "Gen-X/Millennial liberals who like \"edgy\" or informal news.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 65,
-    "name": "Richard Hanania",
-    "score": "42R",
-    "strongestBeliefs": "Human capital, \"Effective Accelerationism,\" and the dismantling of the civil rights bureaucracy.",
-    "commonThemes": "Why the left is so effective at winning culture wars and why \"wokeness\" is a legal issue.",
-    "audienceProfile": "Silicon Valley \"tech bros,\" New Right intellectuals, and the \"Grey Tribe.\"",
-    "xFollowers": null,
-    "youtubeSubscribers": null,
-    "substackSubscribers": null
-  },
-  {
-    "id": 66,
+    "id": 64,
     "name": "Jessica Yellin",
     "score": "10D",
     "strongestBeliefs": "Information accessibility and lowering the \"anxiety\" of news consumption.",
@@ -728,10 +769,11 @@
     "audienceProfile": "\"Apolitical\" but curious citizens, busy professionals, and moderate women.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 67,
+    "id": 65,
     "name": "Anand Giridharadas",
     "score": "48D",
     "strongestBeliefs": "The failure of \"plutocracy\" and the need for radical structural change.",
@@ -739,10 +781,11 @@
     "audienceProfile": "Academics, left-leaning intellectuals, and critics of the 1%.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 68,
+    "id": 66,
     "name": "JoJo Robinson",
     "score": "48D",
     "strongestBeliefs": "Passionate, vocal opposition to the MAGA movement and support for the Biden-Harris agenda.",
@@ -750,10 +793,11 @@
     "audienceProfile": "High-energy digital activists and \"Resistance\" Twitter/X followers.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 69,
+    "id": 67,
     "name": "Tara Palmeri",
     "score": "5R",
     "strongestBeliefs": "Journalistic \"scoops\" and insider access over ideological commentary.",
@@ -761,10 +805,11 @@
     "audienceProfile": "Media professionals, lobbyists, and political junkies who want \"the room where it happens\" info.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 70,
+    "id": 68,
     "name": "Derek Thompson",
     "score": "5D",
     "strongestBeliefs": "Techno-optimism, \"Abundance\" (building more housing, energy, and tech), and a belief that media is too focused on catastrophe.",
@@ -772,10 +817,11 @@
     "audienceProfile": "Tech founders, curious professionals, and people looking for a \"hopeful\" take on the future.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 71,
+    "id": 69,
     "name": "Matt Stoller",
     "score": "10D",
     "strongestBeliefs": "Anti-monopoly and the \"curse of bigness.\" He believes concentrated corporate power is the root of most modern political and economic problems.",
@@ -783,10 +829,11 @@
     "audienceProfile": "Lawyers, small business advocates, and \"New Brandis\" economists from both sides of the aisle.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 72,
+    "id": 70,
     "name": "Andy Borowitz",
     "score": "48D",
     "strongestBeliefs": "Anti-Trumpism and mocking conservative policy through hyperbole.",
@@ -794,21 +841,11 @@
     "audienceProfile": "Liberal Gen-Xers and Boomers who enjoy dry, headline-based humor",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 73,
-    "name": "Joyce Vance",
-    "score": "38D",
-    "strongestBeliefs": "The sanctity of the Department of Justice and the \"Rule of Law\" as a non-partisan pillar.",
-    "commonThemes": "Explaining legal indictments, Supreme Court ethics, and the procedural \"how-to\" of federal law.",
-    "audienceProfile": "\"Resistance\" legal nerds, MSNBC viewers, and concerned institutionalists.",
-    "xFollowers": null,
-    "youtubeSubscribers": null,
-    "substackSubscribers": null
-  },
-  {
-    "id": 74,
+    "id": 71,
     "name": "Jess Craven",
     "score": "48D",
     "strongestBeliefs": "Civic engagement is the cure for political despair; \"Action is the Antidote.\"",
@@ -816,10 +853,11 @@
     "audienceProfile": "Grassroots organizers, progressive moms, and TikTok-active activists.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 75,
+    "id": 72,
     "name": "Thom Hartmann",
     "score": "49D",
     "strongestBeliefs": "Social democracy, restoring the \"Middle Class,\" and curbing corporate personhood.",
@@ -827,10 +865,11 @@
     "audienceProfile": "Progressive radio listeners, union members, and \"New Deal\" nostalgics.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 76,
+    "id": 73,
     "name": "Charlie Sykes",
     "score": "15D",
     "strongestBeliefs": "Conservative principles (as they were pre-2016), civic decency, and opposition to political \"spin.\"",
@@ -838,10 +877,11 @@
     "audienceProfile": "Disaffected Republicans, center-left liberals, and \"The Bulwark\" readers.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 77,
+    "id": 74,
     "name": "Jeff Tiedrich",
     "score": "50D",
     "strongestBeliefs": "Unfiltered, aggressive opposition to Donald Trump and his supporters.",
@@ -849,10 +889,11 @@
     "audienceProfile": "High-intensity anti-Trump X (Twitter) users and progressive \"Reply Guy\" fans.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 78,
+    "id": 75,
     "name": "Ryan Lizza",
     "score": "5D",
     "strongestBeliefs": "Political journalism as an \"insider\" sport; access and deep-dive reporting.",
@@ -860,10 +901,11 @@
     "audienceProfile": "Beltway insiders, media critics, and fans of long-form \"behind-the-curtain\" reporting.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 79,
+    "id": 76,
     "name": "Phillip Swicegood",
     "score": "38R",
     "strongestBeliefs": "Traditional conservatism, Southern/Christian values, and the necessity of \"order.\"",
@@ -871,10 +913,11 @@
     "audienceProfile": "Red-state conservatives, evangelical Christians, and traditional GOP voters.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 80,
+    "id": 77,
     "name": "Michael Wolff",
     "score": "20D",
     "strongestBeliefs": "Power is messy, and everyone in politics is motivated by vanity and fear.",
@@ -882,10 +925,11 @@
     "audienceProfile": "People who love \"gossip-as-news,\" media industry professionals, and fans of Fire and Fury.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 81,
+    "id": 78,
     "name": "Michael Cohen",
     "score": "50D",
     "strongestBeliefs": "The personal \"evil\" of Donald Trump and the need for legal retribution.",
@@ -893,10 +937,11 @@
     "audienceProfile": "Hardcore \"Resistance\" followers and people who enjoy revenge-based political narratives.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 82,
+    "id": 79,
     "name": "Gabe Fleisher",
     "score": "0",
     "strongestBeliefs": "Informing the public is a civic service; \"politics should be accessible to everyone.\"",
@@ -904,21 +949,11 @@
     "audienceProfile": "Students, busy professionals, and people who want the news without the \"yelling.\"",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 83,
-    "name": "Chris Rufo",
-    "score": "45R",
-    "strongestBeliefs": "Recapturing institutions from \"radical\" ideologies and restoring meritocracy.",
-    "commonThemes": "Critical Race Theory (CRT), DEI in corporations, and university administrative bloat.",
-    "audienceProfile": "Intellectual conservatives, \"anti-woke\" parents, and New Right policy makers.",
-    "xFollowers": null,
-    "youtubeSubscribers": null,
-    "substackSubscribers": null
-  },
-  {
-    "id": 84,
+    "id": 80,
     "name": "Sarah Kendzior",
     "score": "45D",
     "strongestBeliefs": "American institutions are inherently fragile and vulnerable to authoritarian capture.",
@@ -926,10 +961,11 @@
     "audienceProfile": "\"Resistance\" academics, researchers of autocracy, and fans of her Gaslit Nation podcast.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 85,
+    "id": 81,
     "name": "Wajahat Ali",
     "score": "40D",
     "strongestBeliefs": "Multiracial democracy and the \"joy\" of political resistance through storytelling.",
@@ -937,10 +973,11 @@
     "audienceProfile": "Diverse progressives, interfaith activists, and readers of The Daily Beast.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 86,
+    "id": 82,
     "name": "Qasim Rashid",
     "score": "48D",
     "strongestBeliefs": "Universal human rights, restorative justice, and religious freedom.",
@@ -948,10 +985,11 @@
     "audienceProfile": "Human rights activists, the Muslim-American community, and social justice organizers.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 87,
+    "id": 83,
     "name": "Brian Beutler",
     "score": "42D",
     "strongestBeliefs": "Structural political reform and the belief that Democrats must \"play hardball\" to win.",
@@ -959,10 +997,11 @@
     "audienceProfile": "Political junkies, Capitol Hill staffers, and aggressive partisan strategists.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 88,
+    "id": 84,
     "name": "Harry Litman",
     "score": "35D",
     "strongestBeliefs": "Institutional integrity of the DOJ and the importance of expert legal consensus.",
@@ -970,10 +1009,11 @@
     "audienceProfile": "Law students, former federal officials, and MSNBC/CNN legal viewers.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 89,
+    "id": 85,
     "name": "Malcolm Nance",
     "score": "48D",
     "strongestBeliefs": "National security is threatened by internal \"treason\" and Russian interference.",
@@ -981,10 +1021,11 @@
     "audienceProfile": "National security hawks (left-leaning), military veterans, and high-intensity anti-Trump voters.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 90,
+    "id": 86,
     "name": "John Ganz",
     "score": "45D",
     "strongestBeliefs": "The rise of modern populism is rooted in the \"lost decade\" of the 1990s.",
@@ -992,10 +1033,11 @@
     "audienceProfile": "Historians, political theorists, and deep-dive intellectual readers.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 91,
+    "id": 87,
     "name": "Katie Halper",
     "score": "50D",
     "strongestBeliefs": "Anti-establishmentarianism and skepticism of \"Mainstream\" Democratic Party narratives.",
@@ -1003,10 +1045,11 @@
     "audienceProfile": "Independent-minded socialists, anti-war activists, and fans of Matt Taibbi.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 92,
+    "id": 88,
     "name": "David Nir",
     "score": "44D",
     "strongestBeliefs": "The path to political power starts with local and state-level \"down-ballot\" races.",
@@ -1014,10 +1057,11 @@
     "audienceProfile": "Campaign data nerds, local organizers, and Daily Kos veterans.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 93,
+    "id": 89,
     "name": "Charlotte Clymer",
     "score": "47D",
     "strongestBeliefs": "Transgender rights are at the center of the modern civil rights struggle.",
@@ -1025,10 +1069,11 @@
     "audienceProfile": "Trans rights activists, military veterans (liberal), and high-visibility digital activists.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 94,
+    "id": 90,
     "name": "David Lat",
     "score": "10R",
     "strongestBeliefs": "The legal system should be elite, transparent, and strictly procedural.",
@@ -1036,10 +1081,11 @@
     "audienceProfile": "Big Law partners, federal judges, and conservative legal scholars.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 95,
+    "id": 91,
     "name": "Anas Alhajji",
     "score": "15R",
     "strongestBeliefs": "Market forces and fossil fuels will remain the backbone of the global economy for decades.",
@@ -1047,10 +1093,11 @@
     "audienceProfile": "Energy investors, hedge fund managers, and geopolitical realists.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 96,
+    "id": 92,
     "name": "Zaid Jilani",
     "score": "5D",
     "strongestBeliefs": "Class-based populism over identity politics.",
@@ -1058,10 +1105,11 @@
     "audienceProfile": "\"Anti-woke\" liberals, class-first progressives, and policy centrists.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 97,
+    "id": 93,
     "name": "Danielle DiMartino Booth",
     "score": "25R",
     "strongestBeliefs": "The Federal Reserve has too much power and has distorted the natural market cycle.",
@@ -1069,21 +1117,23 @@
     "audienceProfile": "\"Doomsday\" investors, financial advisors, and monetary policy skeptics.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 98,
-    "name": "Bill Maher)",
+    "id": 94,
+    "name": "Bill Maher",
     "score": "10D",
     "strongestBeliefs": "Free speech absolutism, secularism/rationalism (vehemently anti-religion), and \"common sense\" environmentalism. He is a fierce critic of what he calls \"performative\" or \"woke\" politics.",
     "commonThemes": "Critiquing \"woke\" culture, the \"cancel culture\" industrial complex, the benefits of capitalism over socialism, and the legalization of marijuana. He often warns Democrats that they are \"losing the plot\" by focusing on identity politics instead of middle-class kitchen table issues.",
     "audienceProfile": "\"Old school\" liberals, Gen-X centrists, \"9/11 Liberals,\" and surprisingly, a growing segment of the right-wing who enjoy seeing him \"roast\" his own side.",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   },
   {
-    "id": 99,
+    "id": 95,
     "name": "Harry Sisson",
     "score": "48D",
     "strongestBeliefs": "Youth engagement is the only way to save American democracy. He believes in the total disqualification of the modern Republican party and is a staunch defender of Democratic leadership (Biden, Harris, and now the 2026-era candidates).",
@@ -1091,6 +1141,7 @@
     "audienceProfile": "Gen-Z progressives, TikTok-first voters, and the \"online center-left.\" He is often criticized by the right as a \"paid shill\" (due to consulting fees from liberal PACs like Democracy Defense Action) and by some on the far-left for being too \"establishment.\"",
     "xFollowers": null,
     "youtubeSubscribers": null,
-    "substackSubscribers": null
+    "substackSubscribers": null,
+    "instagramFollowers": null
   }
 ]
