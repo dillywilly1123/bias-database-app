@@ -3,6 +3,12 @@ import { useState, useEffect } from 'react'
 const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY
 const CORS_PROXY = 'https://api.allorigins.win/raw?url='
 
+function decodeHtmlEntities(str) {
+  const textarea = document.createElement('textarea')
+  textarea.innerHTML = str
+  return textarea.value
+}
+
 function extractYoutubeInfo(url) {
   if (!url) return null
   const handleMatch = url.match(/youtube\.com\/@([^/?]+)/)
@@ -48,7 +54,7 @@ async function fetchYoutubeVideo(youtubeUrl) {
   if (!item) return null
 
   return {
-    title: item.snippet.title,
+    title: decodeHtmlEntities(item.snippet.title),
     videoId: item.id.videoId,
     thumbnail: item.snippet.thumbnails.medium.url,
     publishedAt: item.snippet.publishedAt,
