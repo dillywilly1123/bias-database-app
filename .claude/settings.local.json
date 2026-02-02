@@ -6,7 +6,21 @@
       "Bash(node:*)",
       "Bash(start http://localhost:5173/)",
       "Bash(npm ls:*)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "Bash(winget install:*)",
+      "Bash(gh auth:*)",
+      "Bash(export PATH=\"$PATH:/c/Program Files/GitHub CLI\")",
+      "Bash(gh repo create:*)",
+      "Bash(npm run dev:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(npx vercel --prod)",
+      "Bash(npx vercel --prod --yes)",
+      "Bash(npx vercel login)",
+      "Bash(git -C \"C:\\\\Users\\\\flinn\\\\bias-database-app\" add public/data.json src/components/MetricsBadges.jsx src/components/ScoreBadge.jsx .claude/settings.local.json)",
+      "Bash(git -C \"C:\\\\Users\\\\flinn\\\\bias-database-app\" commit -m \"$\\(cat <<''EOF''\nUpdate data, remove MetricsBadges, and tweak ScoreBadge\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git -C \"C:\\\\Users\\\\flinn\\\\bias-database-app\" push)"
     ]
   }
 }

@@ -40,18 +40,16 @@ export function getScoreColor(score, mode = 'bg') {
 
 export function getLeanLabel(score) {
   const { value, lean } = parseScore(score)
-  if (lean === 'C') return 'Center'
+  if (lean === 'C' || value < 10) return 'Center'
   if (lean === 'D') {
     if (value >= 40) return 'Far Left'
     if (value >= 25) return 'Left'
-    if (value >= 10) return 'Center-Left'
-    return 'Lean Left'
+    return 'Center-Left'
   }
   if (lean === 'R') {
     if (value >= 40) return 'Far Right'
     if (value >= 25) return 'Right'
-    if (value >= 10) return 'Center-Right'
-    return 'Lean Right'
+    return 'Center-Right'
   }
 }
 
