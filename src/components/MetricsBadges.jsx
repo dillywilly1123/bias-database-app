@@ -38,12 +38,29 @@ function InstagramIcon() {
   )
 }
 
+function TikTokIcon() {
+  return (
+    <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.2a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.71a8.21 8.21 0 0 0 4.76 1.52V6.69h-1z" />
+    </svg>
+  )
+}
+
+const URL_KEYS = {
+  xFollowers: 'xUrl',
+  youtubeSubscribers: 'youtubeUrl',
+  substackSubscribers: 'substackUrl',
+  instagramFollowers: 'instagramUrl',
+  tiktokFollowers: 'tiktokUrl',
+}
+
 export default function MetricsBadges({ person, compact = false }) {
   const metrics = [
     { key: 'xFollowers', icon: XIcon, label: 'X' },
     { key: 'youtubeSubscribers', icon: YouTubeIcon, label: 'YouTube' },
     { key: 'substackSubscribers', icon: SubstackIcon, label: 'Substack' },
     { key: 'instagramFollowers', icon: InstagramIcon, label: 'Instagram' },
+    { key: 'tiktokFollowers', icon: TikTokIcon, label: 'TikTok' },
   ]
 
   const available = metrics.filter((m) => person[m.key])
@@ -51,20 +68,46 @@ export default function MetricsBadges({ person, compact = false }) {
 
   return (
     <div className={`flex ${compact ? 'gap-2' : 'gap-3'} flex-wrap`}>
-      {available.map((m) => (
-        <div
-          key={m.key}
-          className={`flex items-center gap-1 ${
-            compact
-              ? 'text-xs text-gray-400 dark:text-gray-500'
-              : 'text-sm text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700/50 px-2.5 py-1 rounded-lg'
-          }`}
-          title={`${m.label}: ${person[m.key].toLocaleString()}`}
-        >
-          <m.icon />
-          <span className="font-medium">{formatCount(person[m.key])}</span>
-        </div>
-      ))}
+      {available.map((m) => {
+        const url = person[URL_KEYS[m.key]]
+        const classes = `flex items-center gap-1 ${
+          compact
+            ? 'text-xs text-gray-400 dark:text-gray-500'
+            : 'text-sm text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700/50 px-2.5 py-1 rounded-lg'
+        }`
+        const content = (
+          <>
+            <m.icon />
+            <span className="font-medium">{formatCount(person[m.key])}</span>
+          </>
+        )
+
+        if (url) {
+          return (
+            <a
+              key={m.key}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${classes} hover:text-gray-700 dark:hover:text-gray-300 transition-colors`}
+              title={`${m.label}: ${person[m.key].toLocaleString()}`}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {content}
+            </a>
+          )
+        }
+
+        return (
+          <div
+            key={m.key}
+            className={classes}
+            title={`${m.label}: ${person[m.key].toLocaleString()}`}
+          >
+            {content}
+          </div>
+        )
+      })}
     </div>
   )
 }

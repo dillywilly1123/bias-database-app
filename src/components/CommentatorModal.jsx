@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import ScoreBadge, { getLeanLabel } from './ScoreBadge'
 import Headshot from './Headshot'
 import MetricsBadges from './MetricsBadges'
+import LatestContent from './LatestContent'
 
 export default function CommentatorModal({ person, onClose }) {
   useEffect(() => {
@@ -90,6 +91,8 @@ export default function CommentatorModal({ person, onClose }) {
               {person.audienceProfile}
             </p>
           </section>
+
+          <LatestContent person={person} />
         </div>
       </div>
     </div>
