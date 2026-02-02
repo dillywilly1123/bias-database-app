@@ -6,7 +6,7 @@ export default function CommentatorCard({ person, latestContent, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="w-full text-left bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg hover:border-gray-300 dark:hover:border-gray-600 transition-all cursor-pointer group"
+      className="w-full text-left flex flex-col justify-start bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg hover:border-gray-300 dark:hover:border-gray-600 transition-all cursor-pointer group"
     >
       <div className="flex items-start gap-4 mb-3">
         <Headshot name={person.name} score={person.score} />
