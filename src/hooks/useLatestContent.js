@@ -1,7 +1,37 @@
 import { useState, useEffect } from 'react'
 
 const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY
-// Use our own API route to avoid CORS issues
+const CACHE_KEY = 'latestContent'
+const CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours in milliseconds
+
+function getCache() {
+  try {
+    const cached = localStorage.getItem(CACHE_KEY)
+    if (!cached) return {}
+    return JSON.parse(cached)
+  } catch {
+    return {}
+  }
+}
+
+function setCache(data) {
+  try {
+    localStorage.setItem(CACHE_KEY, JSON.stringify(data))
+  } catch {
+    // localStorage might be full or disabled
+  }
+}
+
+function getCachedItem(cache, id) {
+  const item = cache[id]
+  if (!item) return null
+  if (Date.now() - item.timestamp > CACHE_TTL) return null
+  return item.data
+}
+
+function setCachedItem(cache, id, data) {
+  cache[id] = { data, timestamp: Date.now() }
+}
 
 function decodeHtmlEntities(str) {
   const textarea = document.createElement('textarea')
@@ -23,43 +53,71 @@ function extractYoutubeInfo(url) {
 
 
 async function fetchYoutubeVideo(youtubeUrl) {
-  if (!YOUTUBE_API_KEY) return null
+  if (!YOUTUBE_API_KEY) {
+    console.error('YouTube API key is missing')
+    return null
+  }
   const info = extractYoutubeInfo(youtubeUrl)
-  if (!info) return null
+  if (!info) {
+    console.error('Could not extract YouTube info from:', youtubeUrl)
+    return null
+  }
 
   let channelId
-  if (info.type === 'channelId') {
-    channelId = info.value
-  } else if (info.type === 'handle') {
-    const channelRes = await fetch(
-      `https://www.googleapis.com/youtube/v3/channels?forHandle=${info.value}&part=id&key=${YOUTUBE_API_KEY}`
-    )
-    const channelData = await channelRes.json()
-    channelId = channelData.items?.[0]?.id
-  } else if (info.type === 'customUrl') {
-    // For custom URLs, search for the channel by name
+  try {
+    if (info.type === 'channelId') {
+      channelId = info.value
+    } else if (info.type === 'handle') {
+      const channelRes = await fetch(
+        `https://www.googleapis.com/youtube/v3/channels?forHandle=${info.value}&part=id&key=${YOUTUBE_API_KEY}`
+      )
+      const channelData = await channelRes.json()
+      if (channelData.error) {
+        console.error('YouTube API error (handle lookup):', channelData.error)
+        return null
+      }
+      channelId = channelData.items?.[0]?.id
+    } else if (info.type === 'customUrl') {
+      const searchRes = await fetch(
+        `https://www.googleapis.com/youtube/v3/search?q=${encodeURIComponent(info.value)}&type=channel&part=snippet&maxResults=1&key=${YOUTUBE_API_KEY}`
+      )
+      const searchData = await searchRes.json()
+      if (searchData.error) {
+        console.error('YouTube API error (custom URL search):', searchData.error)
+        return null
+      }
+      channelId = searchData.items?.[0]?.id?.channelId
+    }
+    if (!channelId) {
+      console.error('Could not find channel ID for:', youtubeUrl)
+      return null
+    }
+
+    // Get latest video
     const searchRes = await fetch(
-      `https://www.googleapis.com/youtube/v3/search?q=${encodeURIComponent(info.value)}&type=channel&part=snippet&maxResults=1&key=${YOUTUBE_API_KEY}`
+      `https://www.googleapis.com/youtube/v3/search?channelId=${channelId}&order=date&maxResults=1&type=video&part=snippet&key=${YOUTUBE_API_KEY}`
     )
     const searchData = await searchRes.json()
-    channelId = searchData.items?.[0]?.id?.channelId
-  }
-  if (!channelId) return null
+    if (searchData.error) {
+      console.error('YouTube API error (video search):', searchData.error)
+      return null
+    }
+    const item = searchData.items?.[0]
+    if (!item) {
+      console.error('No videos found for channel:', channelId)
+      return null
+    }
 
-  // Get latest video
-  const searchRes = await fetch(
-    `https://www.googleapis.com/youtube/v3/search?channelId=${channelId}&order=date&maxResults=1&type=video&part=snippet&key=${YOUTUBE_API_KEY}`
-  )
-  const searchData = await searchRes.json()
-  const item = searchData.items?.[0]
-  if (!item) return null
-
-  return {
-    title: decodeHtmlEntities(item.snippet.title),
-    videoId: item.id.videoId,
-    thumbnail: item.snippet.thumbnails.medium.url,
-    publishedAt: item.snippet.publishedAt,
-    url: `https://www.youtube.com/watch?v=${item.id.videoId}`,
+    return {
+      title: decodeHtmlEntities(item.snippet.title),
+      videoId: item.id.videoId,
+      thumbnail: item.snippet.thumbnails.medium.url,
+      publishedAt: item.snippet.publishedAt,
+      url: `https://www.youtube.com/watch?v=${item.id.videoId}`,
+    }
+  } catch (err) {
+    console.error('YouTube fetch error:', err)
+    return null
   }
 }
 
@@ -96,9 +154,33 @@ export default function useLatestContent(data) {
     const relevantPeople = data.filter((p) => p.youtubeUrl || p.substackUrl)
     if (relevantPeople.length === 0) return
 
+    const cache = getCache()
+    const initialContent = {}
+    const peopleToFetch = []
+
+    // Check cache first
+    for (const person of relevantPeople) {
+      const cached = getCachedItem(cache, person.id)
+      if (cached) {
+        initialContent[person.id] = cached
+      } else {
+        peopleToFetch.push(person)
+      }
+    }
+
+    // Set cached content immediately
+    if (Object.keys(initialContent).length > 0) {
+      setContent(initialContent)
+    }
+
+    // If everything was cached, we're done
+    if (peopleToFetch.length === 0) {
+      return
+    }
+
     setLoading(true)
 
-    const fetches = relevantPeople.map(async (person) => {
+    const fetches = peopleToFetch.map(async (person) => {
       const [ytResult, ssResult] = await Promise.allSettled([
         person.youtubeUrl ? fetchYoutubeVideo(person.youtubeUrl) : Promise.resolve(null),
         person.substackUrl ? fetchSubstackArticle(person.substackUrl) : Promise.resolve(null),
@@ -112,13 +194,15 @@ export default function useLatestContent(data) {
     })
 
     Promise.allSettled(fetches).then((results) => {
-      const map = {}
+      const newContent = { ...initialContent }
       for (const r of results) {
         if (r.status === 'fulfilled' && r.value) {
-          map[r.value.id] = r.value
+          newContent[r.value.id] = r.value
+          setCachedItem(cache, r.value.id, r.value)
         }
       }
-      setContent(map)
+      setCache(cache)
+      setContent(newContent)
       setLoading(false)
     })
   }, [data])
