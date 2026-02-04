@@ -4,6 +4,7 @@ import CommentatorCard from './components/CommentatorCard'
 import CommentatorModal from './components/CommentatorModal'
 import SearchBar from './components/SearchBar'
 import FilterTabs from './components/FilterTabs'
+import KeyIssuesHero from './components/KeyIssuesHero'
 import { parseScore } from './components/ScoreBadge'
 import useLatestContent from './hooks/useLatestContent'
 import { Analytics } from '@vercel/analytics/react'
@@ -81,6 +82,12 @@ function App() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 py-8 space-y-8">
+        {/* Key Issues Hero */}
+        <KeyIssuesHero
+          onCommentatorSelect={setSelected}
+          commentators={data}
+        />
+
         {/* Bias Spectrum */}
         <BiasSpectrum data={data} onSelect={setSelected} />
 

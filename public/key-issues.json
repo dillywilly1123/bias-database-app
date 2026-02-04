@@ -1,0 +1,62 @@
+{
+  "generatedAt": "2026-02-04T12:00:00Z",
+  "topics": [
+    {
+      "id": "topic-1",
+      "title": "Federal Reserve Interest Rate Decision",
+      "description": "The Fed's upcoming meeting on interest rates amid mixed economic signals",
+      "perspectives": {
+        "left": {
+          "summary": "Progressive commentators argue the Fed should prioritize employment over inflation concerns, noting that rate hikes disproportionately impact working-class Americans and small businesses while benefiting large financial institutions.",
+          "keyVoices": ["David Pakman", "Kyle Kulinski"]
+        },
+        "center": {
+          "summary": "Centrist analysts emphasize the Fed's difficult balancing act, acknowledging both inflation risks and growth concerns. They generally support data-driven decisions and warn against politicizing monetary policy.",
+          "keyVoices": ["Matt Yglesias", "Ezra Klein"]
+        },
+        "right": {
+          "summary": "Conservative voices blame previous stimulus spending for current inflation, arguing the Fed waited too long to raise rates. They advocate for tighter monetary policy and reduced government spending.",
+          "keyVoices": ["Ben Shapiro", "Dan Bongino"]
+        }
+      }
+    },
+    {
+      "id": "topic-2",
+      "title": "AI Regulation Proposals in Congress",
+      "description": "New bipartisan bills addressing AI safety, copyright, and workforce impacts",
+      "perspectives": {
+        "left": {
+          "summary": "Left-leaning commentators focus on worker displacement concerns and corporate accountability. They support strong regulations on AI training data, algorithmic bias audits, and protections for creative workers.",
+          "keyVoices": ["Krystal Ball", "Ana Kasparian"]
+        },
+        "center": {
+          "summary": "Moderate voices advocate for balanced regulation that protects consumers without stifling innovation. They emphasize international competitiveness while supporting transparency requirements and liability frameworks.",
+          "keyVoices": ["Destiny", "Coleman Hughes"]
+        },
+        "right": {
+          "summary": "Conservative commentators warn against overregulation that could push AI development overseas. They prefer industry self-regulation and express concern about government censorship through AI content policies.",
+          "keyVoices": ["Tim Pool", "Joe Rogan"]
+        }
+      }
+    },
+    {
+      "id": "topic-3",
+      "title": "Immigration Policy and Border Security",
+      "description": "Ongoing debate over border policy following recent congressional negotiations",
+      "perspectives": {
+        "left": {
+          "summary": "Progressive voices emphasize humanitarian concerns and the economic contributions of immigrants. They criticize enforcement-only approaches and advocate for pathways to citizenship and asylum reform.",
+          "keyVoices": ["Hasan Piker", "Sam Seder"]
+        },
+        "center": {
+          "summary": "Centrist commentators acknowledge the need for both border security and immigration reform. They support bipartisan compromise solutions that address enforcement while creating legal pathways.",
+          "keyVoices": ["Josh Barro", "Nate Silver"]
+        },
+        "right": {
+          "summary": "Conservative commentators prioritize border security and enforcement, arguing current policies encourage illegal crossings. They advocate for stricter asylum rules, wall construction, and deportation of visa overstays.",
+          "keyVoices": ["Steven Crowder", "Matt Walsh"]
+        }
+      }
+    }
+  ]
+}
