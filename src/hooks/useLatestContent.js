@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY
-const CORS_PROXY = 'https://corsproxy.io/?'
+// Use our own API route to avoid CORS issues
 
 function decodeHtmlEntities(str) {
   const textarea = document.createElement('textarea')
@@ -21,22 +21,6 @@ function extractYoutubeInfo(url) {
   return null
 }
 
-function extractFeedUrls(url) {
-  if (!url) return []
-  try {
-    const u = new URL(url)
-    // Try multiple common RSS feed paths
-    return [
-      `${u.origin}/feed`,
-      `${u.origin}/rss`,
-      `${u.origin}/feed.xml`,
-      `${u.origin}/rss.xml`,
-      `${u.origin}/atom.xml`,
-    ]
-  } catch {
-    return []
-  }
-}
 
 async function fetchYoutubeVideo(youtubeUrl) {
   if (!YOUTUBE_API_KEY) return null
@@ -80,30 +64,26 @@ async function fetchYoutubeVideo(youtubeUrl) {
 }
 
 async function fetchSubstackArticle(substackUrl) {
-  const feedUrls = extractFeedUrls(substackUrl)
-  if (feedUrls.length === 0) return null
+  if (!substackUrl) return null
 
-  for (const feedUrl of feedUrls) {
-    try {
-      const res = await fetch(`${CORS_PROXY}${encodeURIComponent(feedUrl)}`)
-      if (!res.ok) continue
-      const text = await res.text()
+  try {
+    const res = await fetch(`/api/rss?url=${encodeURIComponent(substackUrl)}`)
+    if (!res.ok) return null
+    const text = await res.text()
 
-      const parser = new DOMParser()
-      const xml = parser.parseFromString(text, 'text/xml')
-      const item = xml.querySelector('item')
-      if (!item) continue
+    const parser = new DOMParser()
+    const xml = parser.parseFromString(text, 'text/xml')
+    const item = xml.querySelector('item')
+    if (!item) return null
 
-      return {
-        title: item.querySelector('title')?.textContent,
-        url: item.querySelector('link')?.textContent,
-        pubDate: item.querySelector('pubDate')?.textContent,
-      }
-    } catch {
-      continue
+    return {
+      title: item.querySelector('title')?.textContent,
+      url: item.querySelector('link')?.textContent,
+      pubDate: item.querySelector('pubDate')?.textContent,
     }
+  } catch {
+    return null
   }
-  return null
 }
 
 export default function useLatestContent(data) {
