@@ -7,37 +7,50 @@ export default function useKeyIssues() {
 
   useEffect(() => {
     async function fetchKeyIssues() {
+      // Try static file first for reliability
+      // API endpoint is only used when Redis has generated content
       try {
-        // Try the API endpoint first (production with Vercel KV)
-        let response = await fetch('/api/key-issues')
-        let json = await response.json()
+        // First try static file (always available)
+        const staticResponse = await fetch('/key-issues.json')
+        if (staticResponse.ok) {
+          const staticJson = await staticResponse.json()
+          if (staticJson.topics && staticJson.topics.length > 0) {
+            setData(staticJson)
+            setLoading(false)
 
-        // If API returns data with topics, use it
-        if (json.topics && json.topics.length > 0) {
-          setData(json)
-          setLoading(false)
-          return
+            // Then check API for fresher data in background
+            try {
+              const apiResponse = await fetch('/api/key-issues')
+              if (apiResponse.ok) {
+                const apiJson = await apiResponse.json()
+                if (apiJson.topics && apiJson.topics.length > 0) {
+                  setData(apiJson)
+                }
+              }
+            } catch {
+              // API failed, keep using static data
+            }
+            return
+          }
         }
-
-        // Fall back to static file (local development or if KV is empty)
-        response = await fetch('/key-issues.json')
-        if (!response.ok) throw new Error('Failed to fetch key issues')
-        json = await response.json()
-        setData(json)
-        setLoading(false)
-      } catch (err) {
-        // Final fallback: try static file directly
-        try {
-          const response = await fetch('/key-issues.json')
-          if (!response.ok) throw new Error('Failed to fetch key issues')
-          const json = await response.json()
-          setData(json)
-          setLoading(false)
-        } catch (fallbackErr) {
-          setError(fallbackErr.message)
-          setLoading(false)
-        }
+      } catch {
+        // Static file failed, try API
       }
+
+      // Fallback to API only
+      try {
+        const response = await fetch('/api/key-issues')
+        if (response.ok) {
+          const json = await response.json()
+          if (json.topics && json.topics.length > 0) {
+            setData(json)
+          }
+        }
+      } catch {
+        // Both failed
+      }
+
+      setLoading(false)
     }
 
     fetchKeyIssues()
