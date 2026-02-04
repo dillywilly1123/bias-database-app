@@ -41,7 +41,11 @@
     "score": "38R",
     "strongestBeliefs": "Traditional American values, skepticism of progressive social policies.",
     "commonThemes": "Street interviews (\"Man on the street\") highlighting contradictions in liberal cities, immigration, and campus politics.",
-    "audienceProfile": "Viral video consumers, right-leaning Gen-Z, and critics of mainstream urban governance."
+    "audienceProfile": "Viral video consumers, right-leaning Gen-Z, and critics of mainstream urban governance.",
+    "xUrl": "https://x.com/nickshirleyy",
+    "youtubeUrl": "https://www.youtube.com/@NickShirley",
+    "instagramUrl": "https://www.instagram.com/nickshirley",
+    "tiktokUrl": "https://www.tiktok.com/@nickshirleyy"
   },
   {
     "id": 5,
@@ -49,7 +53,11 @@
     "score": "5D",
     "strongestBeliefs": "Gonzo-style empathy; he believes in letting the \"fringe\" speak for themselves without an overt narrator bias.",
     "commonThemes": "Subcultures, political rallies (both sides), and the \"unseen\" America.",
-    "audienceProfile": "Hyper-online Gen-Z/Millennials, fans of irony, and people disillusioned with polished news."
+    "audienceProfile": "Hyper-online Gen-Z/Millennials, fans of irony, and people disillusioned with polished news.",
+    "xUrl": "https://x.com/Channel5iveNews",
+    "youtubeUrl": "https://www.youtube.com/@Channel5YouTube",
+    "instagramUrl": "https://www.instagram.com/andreww.me",
+    "tiktokUrl": "https://www.tiktok.com/@channel5andrewcallaghan"
   },
   {
     "id": 6,
@@ -57,7 +65,9 @@
     "score": "2D",
     "strongestBeliefs": "Probabilistic thinking and the fallibility of experts.",
     "commonThemes": "Polling errors, election forecasting, and the \"pundit fallacy.\"",
-    "audienceProfile": "\"Rationalists,\" gamblers, and political junkies who prefer math over narratives."
+    "audienceProfile": "\"Rationalists,\" gamblers, and political junkies who prefer math over narratives.",
+    "xUrl": "https://x.com/NateSilver538",
+    "substackUrl": "https://www.natesilver.net"
   },
   {
     "id": 7,
@@ -65,226 +75,310 @@
     "score": "12D",
     "strongestBeliefs": "\"One Billion Americans\" (pro-growth), pragmatism, and policy \"wonkery.\"",
     "commonThemes": "Housing supply, neoliberal economics, and criticizing the Democratic party for being \"too activist-driven.\"",
-    "audienceProfile": "Policy professionals, moderate Democrats, and \"YIMBY\" (Yes In My Backyard) advocates."
+    "audienceProfile": "Policy professionals, moderate Democrats, and \"YIMBY\" (Yes In My Backyard) advocates.",
+    "xUrl": "https://x.com/mattyglesias",
+    "substackUrl": "https://www.slowboring.com"
   },
   {
     "id": 8,
-    "name": "Bari Weiss",
-    "score": "15R",
-    "strongestBeliefs": "Liberalism (in the classical sense), free speech, and opposition to \"illiberalism\" on the left.",
-    "commonThemes": "Cancel culture, anti-Semitism, and the \"capture\" of elite institutions by progressive ideology.",
-    "audienceProfile": "Disaffected liberals, \"intellectual dark web\" fans, and centrist conservatives."
-  },
-  {
-    "id": 9,
     "name": "Lee Fang",
     "score": "5D",
     "strongestBeliefs": "Anti-corporatism and government transparency.",
     "commonThemes": "Lobbying scandals, the military-industrial complex, and Pfizer/Big Pharma critiques.",
-    "audienceProfile": "Investigative journalism purists, civil libertarians, and skeptics of the \"Deep State\" from both sides."
+    "audienceProfile": "Investigative journalism purists, civil libertarians, and skeptics of the \"Deep State\" from both sides.",
+    "xUrl": "https://x.com/lhfang",
+    "substackUrl": "https://www.leefang.com"
   },
   {
-    "id": 10,
+    "id": 9,
     "name": "Kyla Scanlon",
     "score": "3D",
     "strongestBeliefs": "Financial literacy and the \"Human\" element of the economy.",
     "commonThemes": "The \"Vibecession,\" housing affordability, and breaking down Fed policy for Gen-Z.",
-    "audienceProfile": "Young professionals, retail investors, and people who find traditional financial news too dry or biased."
+    "audienceProfile": "Young professionals, retail investors, and people who find traditional financial news too dry or biased.",
+    "xUrl": "https://x.com/kylascan",
+    "substackUrl": "https://kyla.substack.com",
+    "youtubeUrl": "https://www.youtube.com/@kylascanlon",
+    "instagramUrl": "https://www.instagram.com/kylascan",
+    "tiktokUrl": "https://www.tiktok.com/@kylascan"
   },
   {
-    "id": 11,
+    "id": 10,
     "name": "Chris Cillizza",
     "score": 0,
     "strongestBeliefs": "The importance of political \"mechanics\" and the idea that everything is a campaign. He believes in analyzing the how of politics over the why.",
     "commonThemes": "Horse-race election coverage, the strategy of political messaging, and \"The Point\"—distilling complex news into quick, readable takeaways.",
-    "audienceProfile": "Political junkies, DC insiders, and readers who want to understand the \"game\" of politics without a moral lecture."
+    "audienceProfile": "Political junkies, DC insiders, and readers who want to understand the \"game\" of politics without a moral lecture.",
+    "xUrl": "https://x.com/ChrisCillizza",
+    "substackUrl": "https://chriscillizza.substack.com",
+    "youtubeUrl": "https://www.youtube.com/chriscillizza",
+    "instagramUrl": "https://www.instagram.com/cillizzac"
   },
   {
-    "id": 12,
+    "id": 11,
     "name": "Steven Bonnell",
     "score": "5D",
     "strongestBeliefs": "Institutionalism, market-driven liberalism, and rigorous debate. He is a staunch defender of capitalism and US foreign policy while holding progressive social views.",
     "commonThemes": "Long-form debates with extremists on both sides, deconstructing misinformation, and defending \"the establishment\" against populist critiques.",
-    "audienceProfile": "High-information Gen-Z/Millennials, \"Omniliberal\" fans, and people who enjoy intellectual combat and long-form Twitch/YouTube streams."
+    "audienceProfile": "High-information Gen-Z/Millennials, \"Omniliberal\" fans, and people who enjoy intellectual combat and long-form Twitch/YouTube streams.",
+    "xUrl": "https://x.com/TheOmniLiberal",
+    "youtubeUrl": "https://www.youtube.com/@destiny",
+    "instagramUrl": "https://www.instagram.com/destiny"
   },
   {
-    "id": 13,
+    "id": 12,
     "name": "Tyler Cowen",
     "score": "5R",
     "strongestBeliefs": "State capacity, cultural growth, and \"Stubborn Attachments\" to long-term economic prosperity.",
     "commonThemes": "Market economics, the impact of AI on society, travel/food as a lens for culture, and \"Great Founder Theory.",
-    "audienceProfile": "Economists, Silicon Valley founders, venture capitalists, and the \"intellectual curious\" who value data over partisan narratives."
+    "audienceProfile": "Economists, Silicon Valley founders, venture capitalists, and the \"intellectual curious\" who value data over partisan narratives.",
+    "xUrl": "https://x.com/tylercowen?lang=en",
+    "substackUrl": "https://substack.com/@tylercowen",
+    "youtubeUrl": "https://www.youtube.com/@CowenConvos",
+    "instagramUrl": "https://www.instagram.com/cowenconvos/?hl=en"
   },
   {
-    "id": 14,
+    "id": 13,
     "name": "Judd Legum",
     "score": "45D",
     "strongestBeliefs": "Corporate accountability, voting rights, and anti-disinformation.",
     "commonThemes": "Tracking corporate donations to controversial causes, Florida’s education policies, and labor rights.",
-    "audienceProfile": "Activists, corporate watchdog groups, and mainstream Democrats."
+    "audienceProfile": "Activists, corporate watchdog groups, and mainstream Democrats.",
+    "xUrl": "https://x.com/JuddLegum",
+    "substackUrl": "https://popular.info/"
   },
   {
-    "id": 15,
+    "id": 14,
     "name": "Brian Tyler Cohen",
     "score": "48D",
     "strongestBeliefs": "Democratic party effectiveness and progressive judicial reform.",
     "commonThemes": "Live reactions to GOP hearings, interviews with top Democratic officials (Biden, Harris, Schumer), and voter mobilization.",
-    "audienceProfile": "High-engagement Democratic voters and Gen-Z progressives."
+    "audienceProfile": "High-engagement Democratic voters and Gen-Z progressives.",
+    "xUrl": "https://x.com/briantylercohen",
+    "substackUrl": "https://plus.briantylercohen.com",
+    "youtubeUrl": "https://www.youtube.com/@briantylercohen",
+    "instagramUrl": "https://www.instagram.com/briantylercohen",
+    "tiktokUrl": "https://www.tiktok.com/@briantylercohen"
   },
   {
-    "id": 16,
+    "id": 15,
     "name": "Heather Cox Richardson",
     "score": "30D",
     "strongestBeliefs": "Liberal democracy, historical continuity, and the protection of the Constitution.",
     "commonThemes": "Daily historical context for current news, the history of the Republican vs. Democratic parties, and the preservation of civil rights.",
-    "audienceProfile": "Educated Boomers, history buffs, and institutional liberals."
+    "audienceProfile": "Educated Boomers, history buffs, and institutional liberals.",
+    "xUrl": "https://x.com/HC_Richardson",
+    "substackUrl": "https://heathercoxrichardson.substack.com"
   },
   {
-    "id": 17,
+    "id": 16,
     "name": "Hasan Piker",
     "score": "50D",
     "strongestBeliefs": "Democratic socialism, wealth redistribution, and anti-imperialism.",
     "commonThemes": "Commentary on \"gaming\" culture vs. politics, unionization, and critiques of capitalism.",
-    "audienceProfile": "Gen-Z/Gen-Alpha, Twitch streamers, and young socialists."
+    "audienceProfile": "Gen-Z/Gen-Alpha, Twitch streamers, and young socialists.",
+    "xUrl": "https://x.com/hasanthehun",
+    "youtubeUrl": "https://www.youtube.com/@hasanabi",
+    "instagramUrl": "https://www.instagram.com/hasandpiker",
+    "tiktokUrl": "https://www.tiktok.com/@hasandpiker"
   },
   {
-    "id": 18,
+    "id": 17,
     "name": "David Pakman",
     "score": "35D",
     "strongestBeliefs": "Rationality, social democracy, and evidence-based policy.",
     "commonThemes": "Debunking right-wing talking points, economic analysis of middle-class policy, and secularism.",
-    "audienceProfile": "Secular progressives, logic-focused liberals, and podcast listeners."
+    "audienceProfile": "Secular progressives, logic-focused liberals, and podcast listeners.",
+    "xUrl": "https://x.com/dpakman",
+    "substackUrl": "https://substack.davidpakman.com",
+    "youtubeUrl": "https://www.youtube.com/@thedavidpakmanshow",
+    "instagramUrl": "https://www.instagram.com/david.pakman",
+    "tiktokUrl": "https://www.tiktok.com/@davidpakmanshow"
   },
   {
-    "id": 19,
+    "id": 18,
     "name": "Aaron Rupar",
     "score": "42D",
     "strongestBeliefs": "Media accountability and anti-Trumpism.",
     "commonThemes": "Clips of Fox News/GOP inconsistencies, breakdowns of political rhetoric, and \"Resistance\" commentary.",
-    "audienceProfile": "X-power users, media critics, and anti-Trump conservatives/liberals."
+    "audienceProfile": "X-power users, media critics, and anti-Trump conservatives/liberals.",
+    "xUrl": "https://x.com/atrupar",
+    "substackUrl": "https://www.publicnotice.co"
   },
   {
-    "id": 20,
+    "id": 19,
     "name": "Robert Reich",
     "score": "45D",
     "strongestBeliefs": "Labor power, curbing corporate monopolies, and tax reform.",
     "commonThemes": "The \"rigged economy,\" CEO-to-worker pay ratios, and the importance of unions.",
-    "audienceProfile": "Labor advocates, economics students, and progressive educators."
+    "audienceProfile": "Labor advocates, economics students, and progressive educators.",
+    "xUrl": "https://x.com/RBReich",
+    "substackUrl": "https://robertreich.substack.com",
+    "youtubeUrl": "https://www.youtube.com/@RBReich",
+    "instagramUrl": "https://www.instagram.com/rbreich",
+    "tiktokUrl": "https://www.tiktok.com/@rbreich"
   },
   {
-    "id": 21,
+    "id": 20,
     "name": "Kyle Kulinski",
     "score": "48D",
     "strongestBeliefs": "Populist progressivism and free speech.",
     "commonThemes": "Medicare for All, ending \"forever wars,\" and criticizing the Democratic establishment from the left.",
-    "audienceProfile": "Disaffected young liberals and Bernie Sanders supporters."
+    "audienceProfile": "Disaffected young liberals and Bernie Sanders supporters.",
+    "xUrl": "https://x.com/kylekulinski",
+    "substackUrl": "https://krystalkyleandfriends.substack.com",
+    "youtubeUrl": "https://www.youtube.com/@SecularTalk"
   },
   {
-    "id": 22,
+    "id": 21,
     "name": "Natalie Wynn",
     "score": "40D",
     "strongestBeliefs": "Social justice, trans rights, and philosophical deconstruction of the right.",
     "commonThemes": "Deep-dive video essays on \"The West,\" \"Wokeism,\" and cultural aesthetics.",
-    "audienceProfile": "Academics, the LGBTQ+ community, and YouTube video-essay enthusiasts."
+    "audienceProfile": "Academics, the LGBTQ+ community, and YouTube video-essay enthusiasts.",
+    "xUrl": "https://x.com/contrapoints",
+    "youtubeUrl": "https://www.youtube.com/@ContraPoints",
+    "instagramUrl": "https://www.instagram.com/contrapoints"
   },
   {
-    "id": 23,
+    "id": 22,
     "name": "MeidasTouch",
     "score": "46D",
     "strongestBeliefs": "Pro-democracy activism and legal accountability.",
     "commonThemes": "Breaking down Trump’s legal trials, pro-Biden messaging, and \"democracy is on the ballot\" framing.",
-    "audienceProfile": "High-energy Democratic activists and anti-MAGA voters."
+    "audienceProfile": "High-energy Democratic activists and anti-MAGA voters.",
+    "xUrl": "https://x.com/MeidasTouch",
+    "substackUrl": "https://www.meidasplus.com",
+    "youtubeUrl": "https://www.youtube.com/@MeidasTouch",
+    "instagramUrl": "https://www.instagram.com/meidastouch",
+    "tiktokUrl": "https://www.tiktok.com/@meidastouch"
   },
   {
-    "id": 24,
+    "id": 23,
     "name": "Tucker Carlson",
     "score": "48R",
     "strongestBeliefs": "American nationalism, anti-interventionism, and skepticism of \"the ruling class.\"",
     "commonThemes": "The border crisis, critiques of the Ukraine war, and questioning institutional \"narratives\" on health and history.",
-    "audienceProfile": "Populist conservatives, rural Americans, and \"New Right\" skeptics."
+    "audienceProfile": "Populist conservatives, rural Americans, and \"New Right\" skeptics.",
+    "xUrl": "https://x.com/TuckerCarlson",
+    "youtubeUrl": "https://www.youtube.com/@TuckerCarlson",
+    "instagramUrl": "https://www.instagram.com/tuckercarlson",
+    "tiktokUrl": "https://www.tiktok.com/@tuckercarlson"
   },
   {
-    "id": 25,
+    "id": 24,
     "name": "Candace Owens",
     "score": "50R",
     "strongestBeliefs": "Traditional family structures, religious morality, and skepticism of modern social movements.",
     "commonThemes": "Critiquing \"Black Lives Matter,\" Hollywood culture, and globalist organizations.",
-    "audienceProfile": "Cultural conservatives, \"Blexit\" supporters, and conspiracy-adjacent skeptics."
+    "audienceProfile": "Cultural conservatives, \"Blexit\" supporters, and conspiracy-adjacent skeptics.",
+    "xUrl": "https://x.com/RealCandaceO",
+    "youtubeUrl": "https://www.youtube.com/@realcandaceo",
+    "instagramUrl": "https://www.instagram.com/realcandaceowens",
+    "tiktokUrl": "https://www.tiktok.com/@candaceoshow"
   },
   {
-    "id": 26,
+    "id": 25,
     "name": "Tim Pool",
     "score": "25R",
     "strongestBeliefs": "Free speech, civil liberties, and anti-corporate media.",
     "commonThemes": "The \"collapse\" of cities, media bias, and culture war flashpoints.",
-    "audienceProfile": "Disaffected former liberals, libertarians, and \"prep-focused\" Gen-X/Millennials."
+    "audienceProfile": "Disaffected former liberals, libertarians, and \"prep-focused\" Gen-X/Millennials.",
+    "xUrl": "https://x.com/Timcast",
+    "youtubeUrl": "https://www.youtube.com/@Timcast",
+    "instagramUrl": "https://www.instagram.com/timcast"
   },
   {
-    "id": 27,
+    "id": 26,
     "name": "Chris Rufo",
     "score": "45R",
     "strongestBeliefs": "Meritocracy and the dismantling of DEI (Diversity, Equity, and Inclusion) structures.",
     "commonThemes": "Critical Race Theory (CRT) in schools, university reform, and \"recapturing\" institutions.",
-    "audienceProfile": "Policy wonks, conservative parents, and intellectual right-wingers."
+    "audienceProfile": "Policy wonks, conservative parents, and intellectual right-wingers.",
+    "xUrl": "https://x.com/realchrisrufo",
+    "substackUrl": "https://christopherrufo.com"
   },
   {
-    "id": 28,
+    "id": 27,
     "name": "Matt Walsh",
     "score": "49R",
     "strongestBeliefs": "Objective truth (specifically on gender), traditional Catholicism, and social conservatism.",
     "commonThemes": "Transgender issues (\"What is a Woman?\"), the \"war on children,\" and anti-woke cultural critiques.",
-    "audienceProfile": "Hardline social conservatives and traditionalist Christians."
+    "audienceProfile": "Hardline social conservatives and traditionalist Christians.",
+    "xUrl": "https://x.com/MattWalshBlog",
+    "youtubeUrl": "https://www.youtube.com/@MattWalshBlog",
+    "instagramUrl": "https://www.instagram.com/mattwalshblog"
   },
   {
-    "id": 29,
+    "id": 28,
     "name": "Konstantin Kisin",
     "score": "22R",
     "strongestBeliefs": "Western civilization, free speech, and anti-woke humor.",
     "commonThemes": "The \"death of the West,\" immigration in Europe, and mocking progressive \"safe spaces.\"",
-    "audienceProfile": "UK/US conservatives, \"Intellectual Dark Web\" fans, and free-speech absolutists."
+    "audienceProfile": "UK/US conservatives, \"Intellectual Dark Web\" fans, and free-speech absolutists.",
+    "xUrl": "https://x.com/KonstantinKisin",
+    "substackUrl": "https://www.konstantinkisin.com",
+    "youtubeUrl": "https://www.youtube.com/@TRIGGERnometry",
+    "instagramUrl": "https://www.instagram.com/konstantinkisin"
   },
   {
-    "id": 30,
+    "id": 29,
     "name": "Michael Shellenberger",
     "score": "28R",
     "strongestBeliefs": "Nuclear energy, free speech, and urban law and order",
     "commonThemes": "The Twitter Files, \"San Fransicko\" (urban decay), and the \"Censorship Industrial Complex.\"",
-    "audienceProfile": "Silicon Valley libertarians, environmental skeptics, and investigative junkies."
+    "audienceProfile": "Silicon Valley libertarians, environmental skeptics, and investigative junkies.",
+    "xUrl": "https://x.com/shellenberger",
+    "substackUrl": "https://public.substack.com",
+    "instagramUrl": "https://www.instagram.com/shellenberger"
   },
   {
-    "id": 31,
+    "id": 30,
     "name": "Steven Crowder",
     "score": "47R",
     "strongestBeliefs": "Second Amendment rights, small government, and \"masculine\" values.",
     "commonThemes": "\"Change My Mind\" street segments, mocking liberal protests, and anti-socialism.",
-    "audienceProfile": "Young conservative males and \"frat-style\" political fans."
+    "audienceProfile": "Young conservative males and \"frat-style\" political fans.",
+    "xUrl": "https://x.com/scrowder",
+    "youtubeUrl": "https://www.youtube.com/@StevenCrowder",
+    "instagramUrl": "https://www.instagram.com/louderwithcrowder"
   },
   {
-    "id": 32,
+    "id": 31,
     "name": "Erick Erickson",
     "score": "38R",
     "strongestBeliefs": "Religious liberty, federalism, and traditional GOP principles.",
     "commonThemes": "Georgia politics, the intersection of faith and policy, and the future of the Republican party post-Trump.",
-    "audienceProfile": "Southern conservatives, church-goers, and establishment-leaning Republicans."
+    "audienceProfile": "Southern conservatives, church-goers, and establishment-leaning Republicans.",
+    "xUrl": "https://x.com/EWErickson",
+    "substackUrl": "https://ewerickson.substack.com",
+    "instagramUrl": "https://www.instagram.com/ewerickson"
   },
   {
-    "id": 33,
+    "id": 32,
     "name": "Mehdi Hasan",
     "score": "48D",
     "strongestBeliefs": "Anti-imperialism, human rights, and aggressive accountability for power.",
     "commonThemes": "Israel-Palestine conflict, deconstructing right-wing rhetoric, and media criticism.",
-    "audienceProfile": "Global progressives, activists, and critics of mainstream Western media."
+    "audienceProfile": "Global progressives, activists, and critics of mainstream Western media.",
+    "xUrl": "https://x.com/mehdirhasan",
+    "substackUrl": "https://zeteo.com",
+    "youtubeUrl": "https://www.youtube.com/@ZeteoNews",
+    "instagramUrl": "https://www.instagram.com/mehdirhasan",
+    "tiktokUrl": "https://www.tiktok.com/@mehdirhasan"
   },
   {
-    "id": 34,
+    "id": 33,
     "name": "Matt Taibbi",
     "score": "15R",
     "strongestBeliefs": "Civil liberties, free speech, and skepticism of the \"Censorship Industrial Complex.\"",
     "commonThemes": "The Twitter Files, media malfeasance, and critiques of the Democratic party’s relationship with intelligence agencies.",
-    "audienceProfile": "Disaffected liberals, civil libertarians, and \"anti-woke\" skeptics of both parties."
+    "audienceProfile": "Disaffected liberals, civil libertarians, and \"anti-woke\" skeptics of both parties.",
+    "xUrl": "https://x.com/mtaibbi",
+    "substackUrl": "https://www.racket.news"
   },
   {
-    "id": 35,
+    "id": 34,
     "name": "Joyce Vance",
     "score": "38D",
     "strongestBeliefs": "Rule of law, judicial integrity, and institutional stability.",
@@ -292,7 +386,7 @@
     "audienceProfile": "\"Legal nerds,\" mainstream Democrats, and followers of MSNBC."
   },
   {
-    "id": 36,
+    "id": 35,
     "name": "Dan Rather",
     "score": "32D",
     "strongestBeliefs": "Old-school American patriotism, journalistic integrity, and civil discourse.",
@@ -300,7 +394,7 @@
     "audienceProfile": "Older liberals, Boomers, and people nostalgic for traditional \"Anchor\" journalism."
   },
   {
-    "id": 37,
+    "id": 36,
     "name": "Steve Schmidt",
     "score": "35D",
     "strongestBeliefs": "Defending the Republic against \"autocratic\" threats.",
@@ -308,7 +402,7 @@
     "audienceProfile": "Never-Trump Republicans, Lincoln Project supporters, and high-engagement Democrats."
   },
   {
-    "id": 38,
+    "id": 37,
     "name": "Andrew Sullivan",
     "score": "18R",
     "strongestBeliefs": "Skepticism of extremes, religious freedom, and the \"Great Awokening\" critique.",
@@ -316,7 +410,7 @@
     "audienceProfile": "Intellectual conservatives, \"Old School\" liberals, and people who dislike identity politics."
   },
   {
-    "id": 39,
+    "id": 38,
     "name": "Erin Reed",
     "score": "50D",
     "strongestBeliefs": "Transgender rights and healthcare access.",
@@ -324,7 +418,7 @@
     "audienceProfile": "Trans rights activists, policy researchers, and the LGBTQ+ community."
   },
   {
-    "id": 40,
+    "id": 39,
     "name": "Dan Pfeiffer",
     "score": "45D",
     "strongestBeliefs": "Democratic party strategy and digital communication.",
@@ -332,7 +426,7 @@
     "audienceProfile": "Democratic staffers, \"Pod Save America\" fans, and partisan activists."
   },
   {
-    "id": 41,
+    "id": 40,
     "name": "Mary L. Trump",
     "score": "48D",
     "strongestBeliefs": "Psychological accountability and anti-Trumpism.",
@@ -340,7 +434,7 @@
     "audienceProfile": "Dedicated anti-Trump voters and fans of psychological political analysis."
   },
   {
-    "id": 42,
+    "id": 41,
     "name": "Rick Wilson",
     "score": "40D",
     "strongestBeliefs": "Opposing the MAGA movement through aggressive media tactics.",
@@ -348,7 +442,7 @@
     "audienceProfile": "Hardcore anti-MAGA activists and strategy-minded Democrats."
   },
   {
-    "id": 43,
+    "id": 42,
     "name": "Seth Abramson",
     "score": "46D",
     "strongestBeliefs": "Investigative \"curation\" and connecting disparate dots of political corruption.",
@@ -356,7 +450,7 @@
     "audienceProfile": "\"Resistance\" Twitter/X base and enthusiasts of complex political investigations."
   },
   {
-    "id": 44,
+    "id": 43,
     "name": "Ken Klippenstein",
     "score": "45D",
     "strongestBeliefs": "Government transparency and anti-secrecy.",
@@ -364,7 +458,7 @@
     "audienceProfile": "Anti-war activists, investigative purists, and skeptics of the CIA/FBI."
   },
   {
-    "id": 45,
+    "id": 44,
     "name": "Peter Beinart",
     "score": "42D",
     "strongestBeliefs": "Ethical Jewish identity and a \"one-state\" or \"binational\" solution for Israel-Palestine.",
@@ -372,7 +466,7 @@
     "audienceProfile": "Progressive Jewish Americans, foreign policy academics, and liberal Zionism critics."
   },
   {
-    "id": 46,
+    "id": 45,
     "name": "Michael Moore",
     "score": "50D",
     "strongestBeliefs": "Worker power, anti-capitalism, and grassroots activism.",
@@ -380,7 +474,7 @@
     "audienceProfile": "Unions, progressive activists, and long-time fans of his documentary work."
   },
   {
-    "id": 47,
+    "id": 46,
     "name": "Glenn Loury",
     "score": "35R",
     "strongestBeliefs": "Meritocracy, racial self-reliance, and intellectual honesty.",
@@ -388,7 +482,7 @@
     "audienceProfile": "\"Heterodox\" intellectuals, Black conservatives, and critics of DEI."
   },
   {
-    "id": 48,
+    "id": 47,
     "name": "Julie Kelly",
     "score": "48R",
     "strongestBeliefs": "Justice for January 6th defendants and exposing \"deep state\" weaponization.",
@@ -396,7 +490,7 @@
     "audienceProfile": "MAGA activists, election skeptics, and hard-right legal observers."
   },
   {
-    "id": 49,
+    "id": 48,
     "name": "Richard Hanania",
     "score": "40R",
     "strongestBeliefs": "Scientific rationalism, anti-woke \"civil rights\" reform, and foreign policy realism.",
@@ -404,7 +498,7 @@
     "audienceProfile": "Silicon Valley \"Effective Accelerationists,\" New Right intellectuals, and policy wonks."
   },
   {
-    "id": 50,
+    "id": 49,
     "name": "Hamilton Nolan",
     "score": "48D",
     "strongestBeliefs": "Labor rights and the destruction of the billionaire class.",
@@ -412,7 +506,7 @@
     "audienceProfile": "Labor organizers, journalists, and socialist-leaning Millennials."
   },
   {
-    "id": 51,
+    "id": 50,
     "name": "Miles Taylor",
     "score": "25D",
     "strongestBeliefs": "National security and \"Anonymous\" dissent against autocracy.",
@@ -420,7 +514,7 @@
     "audienceProfile": "Moderate Republicans, \"Deep State\" defenders, and centrist Democrats."
   },
   {
-    "id": 52,
+    "id": 51,
     "name": "Sasha Stone",
     "score": "35R",
     "strongestBeliefs": "Protecting free speech from \"the mob\" and cultural sanity.",
@@ -428,7 +522,7 @@
     "audienceProfile": "Former Democrats, culture-war observers, and critics of \"woke\" Hollywood."
   },
   {
-    "id": 53,
+    "id": 52,
     "name": "The Bulwark",
     "score": "12D",
     "strongestBeliefs": "Preserving democratic institutions and opposing \"illiberalism\" on the right.",
@@ -436,7 +530,7 @@
     "audienceProfile": "Never-Trump Republicans, moderate Democrats, and DC establishment types."
   },
   {
-    "id": 54,
+    "id": 53,
     "name": "The Contrarian",
     "score": "38D",
     "strongestBeliefs": "Moral clarity in politics and the \"pro-democracy\" defense of institutions.",
@@ -444,7 +538,7 @@
     "audienceProfile": "Disaffected center-right voters and mainstream liberals."
   },
   {
-    "id": 55,
+    "id": 54,
     "name": "Paul Krugman",
     "score": "44D",
     "strongestBeliefs": "Keynesian economics, the \"social safety net,\" and the danger of supply-side theory.",
@@ -452,7 +546,7 @@
     "audienceProfile": "Liberal economists, academics, and readers of The New York Times."
   },
   {
-    "id": 56,
+    "id": 55,
     "name": "Sharon McMahon",
     "score": "5D",
     "strongestBeliefs": "Civic education (\"America's Government Teacher\") and non-partisan historical accuracy.",
@@ -460,7 +554,7 @@
     "audienceProfile": "Educators, parents, and people looking for a detox from partisan screaming."
   },
   {
-    "id": 57,
+    "id": 56,
     "name": "Lincoln Square)",
     "score": "45D",
     "strongestBeliefs": "Offensive political warfare against the MAGA movement.",
@@ -468,7 +562,7 @@
     "audienceProfile": "High-intensity anti-MAGA activists and \"The Lincoln Project\" fans."
   },
   {
-    "id": 58,
+    "id": 57,
     "name": "Adam Kinzinger",
     "score": "15D",
     "strongestBeliefs": "Integrity, duty, and the preservation of the constitutional order over party loyalty.",
@@ -476,7 +570,7 @@
     "audienceProfile": "Moderate Republicans and patriotic-leaning Democrats."
   },
   {
-    "id": 59,
+    "id": 58,
     "name": "Jerusalem Demsas",
     "score": "10D",
     "strongestBeliefs": "\"Abundance\" liberalism—pro-growth, pro-housing, and pro-technology.",
@@ -484,7 +578,7 @@
     "audienceProfile": "YIMBYs, Silicon Valley progressives, and policy-oriented \"wonks.\""
   },
   {
-    "id": 60,
+    "id": 59,
     "name": "Jay Kuo",
     "score": "42D",
     "strongestBeliefs": "Legal justice and clear communication for the \"resistance.\"",
@@ -492,7 +586,7 @@
     "audienceProfile": "Progressive legal observers and highly active Democratic voters."
   },
   {
-    "id": 61,
+    "id": 60,
     "name": "Robert Hubbell",
     "score": "36D",
     "strongestBeliefs": "Optimism in the face of political chaos and the power of the individual voter.",
@@ -500,7 +594,7 @@
     "audienceProfile": "Grassroots Democratic organizers and \"hopeful\" progressives."
   },
   {
-    "id": 62,
+    "id": 61,
     "name": "Dan Pfeiffer",
     "score": "46D",
     "strongestBeliefs": "Strategic communication and reclaiming the \"digital airwaves\" from the right.",
@@ -508,7 +602,7 @@
     "audienceProfile": "\"Pod Save America\" listeners and Democratic campaign staffers."
   },
   {
-    "id": 63,
+    "id": 62,
     "name": "Simon Rosenberg",
     "score": "47D",
     "strongestBeliefs": "Data-driven optimism and the strength of the \"Democratic brand.\"",
@@ -516,7 +610,7 @@
     "audienceProfile": "Democratic party cheerleaders and data-minded progressives."
   },
   {
-    "id": 64,
+    "id": 63,
     "name": "Jonathan Larsen",
     "score": "40D",
     "strongestBeliefs": "Unvarnished truth-telling without the \"politeness\" of corporate media.",
@@ -524,7 +618,7 @@
     "audienceProfile": "Gen-X/Millennial liberals who like \"edgy\" or informal news."
   },
   {
-    "id": 65,
+    "id": 64,
     "name": "Jessica Yellin",
     "score": "10D",
     "strongestBeliefs": "Information accessibility and lowering the \"anxiety\" of news consumption.",
@@ -532,7 +626,7 @@
     "audienceProfile": "\"Apolitical\" but curious citizens, busy professionals, and moderate women."
   },
   {
-    "id": 66,
+    "id": 65,
     "name": "Anand Giridharadas",
     "score": "48D",
     "strongestBeliefs": "The failure of \"plutocracy\" and the need for radical structural change.",
@@ -540,7 +634,7 @@
     "audienceProfile": "Academics, left-leaning intellectuals, and critics of the 1%."
   },
   {
-    "id": 67,
+    "id": 66,
     "name": "JoJo Robinson",
     "score": "48D",
     "strongestBeliefs": "Passionate, vocal opposition to the MAGA movement and support for the Biden-Harris agenda.",
@@ -548,7 +642,7 @@
     "audienceProfile": "High-energy digital activists and \"Resistance\" Twitter/X followers."
   },
   {
-    "id": 68,
+    "id": 67,
     "name": "Tara Palmeri",
     "score": "5R",
     "strongestBeliefs": "Journalistic \"scoops\" and insider access over ideological commentary.",
@@ -556,7 +650,7 @@
     "audienceProfile": "Media professionals, lobbyists, and political junkies who want \"the room where it happens\" info."
   },
   {
-    "id": 69,
+    "id": 68,
     "name": "Derek Thompson",
     "score": "5D",
     "strongestBeliefs": "Techno-optimism, \"Abundance\" (building more housing, energy, and tech), and a belief that media is too focused on catastrophe.",
@@ -564,7 +658,7 @@
     "audienceProfile": "Tech founders, curious professionals, and people looking for a \"hopeful\" take on the future."
   },
   {
-    "id": 70,
+    "id": 69,
     "name": "Matt Stoller",
     "score": "10D",
     "strongestBeliefs": "Anti-monopoly and the \"curse of bigness.\" He believes concentrated corporate power is the root of most modern political and economic problems.",
@@ -572,7 +666,7 @@
     "audienceProfile": "Lawyers, small business advocates, and \"New Brandis\" economists from both sides of the aisle."
   },
   {
-    "id": 71,
+    "id": 70,
     "name": "Andy Borowitz",
     "score": "48D",
     "strongestBeliefs": "Anti-Trumpism and mocking conservative policy through hyperbole.",
@@ -580,7 +674,7 @@
     "audienceProfile": "Liberal Gen-Xers and Boomers who enjoy dry, headline-based humor"
   },
   {
-    "id": 72,
+    "id": 71,
     "name": "Joyce Vance",
     "score": "38D",
     "strongestBeliefs": "The sanctity of the Department of Justice and the \"Rule of Law\" as a non-partisan pillar.",
@@ -588,7 +682,7 @@
     "audienceProfile": "\"Resistance\" legal nerds, MSNBC viewers, and concerned institutionalists."
   },
   {
-    "id": 73,
+    "id": 72,
     "name": "Jess Craven",
     "score": "48D",
     "strongestBeliefs": "Civic engagement is the cure for political despair; \"Action is the Antidote.\"",
@@ -596,7 +690,7 @@
     "audienceProfile": "Grassroots organizers, progressive moms, and TikTok-active activists."
   },
   {
-    "id": 74,
+    "id": 73,
     "name": "Thom Hartmann",
     "score": "49D",
     "strongestBeliefs": "Social democracy, restoring the \"Middle Class,\" and curbing corporate personhood.",
@@ -604,7 +698,7 @@
     "audienceProfile": "Progressive radio listeners, union members, and \"New Deal\" nostalgics."
   },
   {
-    "id": 75,
+    "id": 74,
     "name": "Charlie Sykes",
     "score": "15D",
     "strongestBeliefs": "Conservative principles (as they were pre-2016), civic decency, and opposition to political \"spin.\"",
@@ -612,7 +706,7 @@
     "audienceProfile": "Disaffected Republicans, center-left liberals, and \"The Bulwark\" readers."
   },
   {
-    "id": 76,
+    "id": 75,
     "name": "Jeff Tiedrich",
     "score": "50D",
     "strongestBeliefs": "Unfiltered, aggressive opposition to Donald Trump and his supporters.",
@@ -620,7 +714,7 @@
     "audienceProfile": "High-intensity anti-Trump X (Twitter) users and progressive \"Reply Guy\" fans."
   },
   {
-    "id": 77,
+    "id": 76,
     "name": "Ryan Lizza",
     "score": "5D",
     "strongestBeliefs": "Political journalism as an \"insider\" sport; access and deep-dive reporting.",
@@ -628,7 +722,7 @@
     "audienceProfile": "Beltway insiders, media critics, and fans of long-form \"behind-the-curtain\" reporting."
   },
   {
-    "id": 78,
+    "id": 77,
     "name": "Phillip Swicegood",
     "score": "38R",
     "strongestBeliefs": "Traditional conservatism, Southern/Christian values, and the necessity of \"order.\"",
@@ -636,7 +730,7 @@
     "audienceProfile": "Red-state conservatives, evangelical Christians, and traditional GOP voters."
   },
   {
-    "id": 79,
+    "id": 78,
     "name": "Michael Wolff",
     "score": "20D",
     "strongestBeliefs": "Power is messy, and everyone in politics is motivated by vanity and fear.",
@@ -644,7 +738,7 @@
     "audienceProfile": "People who love \"gossip-as-news,\" media industry professionals, and fans of Fire and Fury."
   },
   {
-    "id": 80,
+    "id": 79,
     "name": "Michael Cohen",
     "score": "50D",
     "strongestBeliefs": "The personal \"evil\" of Donald Trump and the need for legal retribution.",
@@ -652,7 +746,7 @@
     "audienceProfile": "Hardcore \"Resistance\" followers and people who enjoy revenge-based political narratives."
   },
   {
-    "id": 81,
+    "id": 80,
     "name": "Gabe Fleisher",
     "score": 0,
     "strongestBeliefs": "Informing the public is a civic service; \"politics should be accessible to everyone.\"",
@@ -660,7 +754,7 @@
     "audienceProfile": "Students, busy professionals, and people who want the news without the \"yelling.\""
   },
   {
-    "id": 82,
+    "id": 81,
     "name": "Chris Rufo",
     "score": "45R",
     "strongestBeliefs": "Recapturing institutions from \"radical\" ideologies and restoring meritocracy.",
@@ -668,7 +762,7 @@
     "audienceProfile": "Intellectual conservatives, \"anti-woke\" parents, and New Right policy makers."
   },
   {
-    "id": 83,
+    "id": 82,
     "name": "Sarah Kendzior",
     "score": "45D",
     "strongestBeliefs": "American institutions are inherently fragile and vulnerable to authoritarian capture.",
@@ -676,7 +770,7 @@
     "audienceProfile": "\"Resistance\" academics, researchers of autocracy, and fans of her Gaslit Nation podcast."
   },
   {
-    "id": 84,
+    "id": 83,
     "name": "Wajahat Ali",
     "score": "40D",
     "strongestBeliefs": "Multiracial democracy and the \"joy\" of political resistance through storytelling.",
@@ -684,7 +778,7 @@
     "audienceProfile": "Diverse progressives, interfaith activists, and readers of The Daily Beast."
   },
   {
-    "id": 85,
+    "id": 84,
     "name": "Qasim Rashid",
     "score": "48D",
     "strongestBeliefs": "Universal human rights, restorative justice, and religious freedom.",
@@ -692,7 +786,7 @@
     "audienceProfile": "Human rights activists, the Muslim-American community, and social justice organizers."
   },
   {
-    "id": 86,
+    "id": 85,
     "name": "Brian Beutler",
     "score": "42D",
     "strongestBeliefs": "Structural political reform and the belief that Democrats must \"play hardball\" to win.",
@@ -700,7 +794,7 @@
     "audienceProfile": "Political junkies, Capitol Hill staffers, and aggressive partisan strategists."
   },
   {
-    "id": 87,
+    "id": 86,
     "name": "Harry Litman",
     "score": "35D",
     "strongestBeliefs": "Institutional integrity of the DOJ and the importance of expert legal consensus.",
@@ -708,7 +802,7 @@
     "audienceProfile": "Law students, former federal officials, and MSNBC/CNN legal viewers."
   },
   {
-    "id": 88,
+    "id": 87,
     "name": "Malcolm Nance",
     "score": "48D",
     "strongestBeliefs": "National security is threatened by internal \"treason\" and Russian interference.",
@@ -716,7 +810,7 @@
     "audienceProfile": "National security hawks (left-leaning), military veterans, and high-intensity anti-Trump voters."
   },
   {
-    "id": 89,
+    "id": 88,
     "name": "John Ganz",
     "score": "45D",
     "strongestBeliefs": "The rise of modern populism is rooted in the \"lost decade\" of the 1990s.",
@@ -724,7 +818,7 @@
     "audienceProfile": "Historians, political theorists, and deep-dive intellectual readers."
   },
   {
-    "id": 90,
+    "id": 89,
     "name": "Katie Halper",
     "score": "50D",
     "strongestBeliefs": "Anti-establishmentarianism and skepticism of \"Mainstream\" Democratic Party narratives.",
@@ -732,7 +826,7 @@
     "audienceProfile": "Independent-minded socialists, anti-war activists, and fans of Matt Taibbi."
   },
   {
-    "id": 91,
+    "id": 90,
     "name": "David Nir",
     "score": "44D",
     "strongestBeliefs": "The path to political power starts with local and state-level \"down-ballot\" races.",
@@ -740,7 +834,7 @@
     "audienceProfile": "Campaign data nerds, local organizers, and Daily Kos veterans."
   },
   {
-    "id": 92,
+    "id": 91,
     "name": "Charlotte Clymer",
     "score": "47D",
     "strongestBeliefs": "Transgender rights are at the center of the modern civil rights struggle.",
@@ -748,7 +842,7 @@
     "audienceProfile": "Trans rights activists, military veterans (liberal), and high-visibility digital activists."
   },
   {
-    "id": 93,
+    "id": 92,
     "name": "David Lat",
     "score": "10R",
     "strongestBeliefs": "The legal system should be elite, transparent, and strictly procedural.",
@@ -756,7 +850,7 @@
     "audienceProfile": "Big Law partners, federal judges, and conservative legal scholars."
   },
   {
-    "id": 94,
+    "id": 93,
     "name": "Anas Alhajji",
     "score": "15R",
     "strongestBeliefs": "Market forces and fossil fuels will remain the backbone of the global economy for decades.",
@@ -764,7 +858,7 @@
     "audienceProfile": "Energy investors, hedge fund managers, and geopolitical realists."
   },
   {
-    "id": 95,
+    "id": 94,
     "name": "Zaid Jilani",
     "score": "5D",
     "strongestBeliefs": "Class-based populism over identity politics.",
@@ -772,7 +866,7 @@
     "audienceProfile": "\"Anti-woke\" liberals, class-first progressives, and policy centrists."
   },
   {
-    "id": 96,
+    "id": 95,
     "name": "Danielle DiMartino Booth",
     "score": "25R",
     "strongestBeliefs": "The Federal Reserve has too much power and has distorted the natural market cycle.",
@@ -780,7 +874,7 @@
     "audienceProfile": "\"Doomsday\" investors, financial advisors, and monetary policy skeptics."
   },
   {
-    "id": 97,
+    "id": 96,
     "name": "Bill Maher",
     "score": "10D",
     "strongestBeliefs": "Free speech absolutism, secularism/rationalism (vehemently anti-religion), and \"common sense\" environmentalism. He is a fierce critic of what he calls \"performative\" or \"woke\" politics.",
@@ -788,7 +882,7 @@
     "audienceProfile": "\"Old school\" liberals, Gen-X centrists, \"9/11 Liberals,\" and surprisingly, a growing segment of the right-wing who enjoy seeing him \"roast\" his own side."
   },
   {
-    "id": 98,
+    "id": 97,
     "name": "Harry Sisson",
     "score": "48D",
     "strongestBeliefs": "Youth engagement is the only way to save American democracy. He believes in the total disqualification of the modern Republican party and is a staunch defender of Democratic leadership (Biden, Harris, and now the 2026-era candidates).",
