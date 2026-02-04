@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY
-const CORS_PROXY = 'https://api.allorigins.win/raw?url='
+const CORS_PROXY = 'https://corsproxy.io/?'
 
 function decodeHtmlEntities(str) {
   const textarea = document.createElement('textarea')
@@ -15,16 +15,26 @@ function extractYoutubeInfo(url) {
   if (handleMatch) return { type: 'handle', value: handleMatch[1] }
   const channelMatch = url.match(/youtube\.com\/channel\/([^/?]+)/)
   if (channelMatch) return { type: 'channelId', value: channelMatch[1] }
+  // Custom URL format: youtube.com/username (no @ or /channel/)
+  const customMatch = url.match(/youtube\.com\/(?!@|channel\/|c\/|user\/|watch|playlist|feed|shorts)([^/?]+)/)
+  if (customMatch) return { type: 'customUrl', value: customMatch[1] }
   return null
 }
 
-function extractFeedUrl(url) {
-  if (!url) return null
+function extractFeedUrls(url) {
+  if (!url) return []
   try {
     const u = new URL(url)
-    return `${u.origin}/feed`
+    // Try multiple common RSS feed paths
+    return [
+      `${u.origin}/feed`,
+      `${u.origin}/rss`,
+      `${u.origin}/feed.xml`,
+      `${u.origin}/rss.xml`,
+      `${u.origin}/atom.xml`,
+    ]
   } catch {
-    return null
+    return []
   }
 }
 
@@ -36,12 +46,19 @@ async function fetchYoutubeVideo(youtubeUrl) {
   let channelId
   if (info.type === 'channelId') {
     channelId = info.value
-  } else {
+  } else if (info.type === 'handle') {
     const channelRes = await fetch(
       `https://www.googleapis.com/youtube/v3/channels?forHandle=${info.value}&part=id&key=${YOUTUBE_API_KEY}`
     )
     const channelData = await channelRes.json()
     channelId = channelData.items?.[0]?.id
+  } else if (info.type === 'customUrl') {
+    // For custom URLs, search for the channel by name
+    const searchRes = await fetch(
+      `https://www.googleapis.com/youtube/v3/search?q=${encodeURIComponent(info.value)}&type=channel&part=snippet&maxResults=1&key=${YOUTUBE_API_KEY}`
+    )
+    const searchData = await searchRes.json()
+    channelId = searchData.items?.[0]?.id?.channelId
   }
   if (!channelId) return null
 
@@ -63,21 +80,30 @@ async function fetchYoutubeVideo(youtubeUrl) {
 }
 
 async function fetchSubstackArticle(substackUrl) {
-  const feedUrl = extractFeedUrl(substackUrl)
-  if (!feedUrl) return null
-  const res = await fetch(`${CORS_PROXY}${encodeURIComponent(feedUrl)}`)
-  const text = await res.text()
+  const feedUrls = extractFeedUrls(substackUrl)
+  if (feedUrls.length === 0) return null
 
-  const parser = new DOMParser()
-  const xml = parser.parseFromString(text, 'text/xml')
-  const item = xml.querySelector('item')
-  if (!item) return null
+  for (const feedUrl of feedUrls) {
+    try {
+      const res = await fetch(`${CORS_PROXY}${encodeURIComponent(feedUrl)}`)
+      if (!res.ok) continue
+      const text = await res.text()
 
-  return {
-    title: item.querySelector('title')?.textContent,
-    url: item.querySelector('link')?.textContent,
-    pubDate: item.querySelector('pubDate')?.textContent,
+      const parser = new DOMParser()
+      const xml = parser.parseFromString(text, 'text/xml')
+      const item = xml.querySelector('item')
+      if (!item) continue
+
+      return {
+        title: item.querySelector('title')?.textContent,
+        url: item.querySelector('link')?.textContent,
+        pubDate: item.querySelector('pubDate')?.textContent,
+      }
+    } catch {
+      continue
+    }
   }
+  return null
 }
 
 export default function useLatestContent(data) {
