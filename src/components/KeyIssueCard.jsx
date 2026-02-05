@@ -6,32 +6,16 @@ const PERSPECTIVES = [
   { key: 'right', label: 'Right', color: 'red' }
 ]
 
-export default function KeyIssueCard({ topic, onVoiceClick, commentators, latestContent }) {
+export default function KeyIssueCard({ topic, onVoiceClick }) {
   const [activeTab, setActiveTab] = useState('center')
   const activePerspective = topic.perspectives[activeTab]
 
-  // Get articles for key voices in the active perspective
-  const keyOpinions = useMemo(() => {
-    if (!activePerspective?.keyVoices || !commentators || !latestContent) return []
-
-    return activePerspective.keyVoices
-      .map((voiceName) => {
-        const commentator = commentators.find(
-          (c) => c.name.toLowerCase() === voiceName.toLowerCase()
-        )
-        if (!commentator) return null
-
-        const content = latestContent[commentator.id]
-        const article = content?.substackArticle
-        if (!article) return null
-
-        return {
-          name: commentator.name,
-          article
-        }
-      })
-      .filter(Boolean)
-  }, [activePerspective, commentators, latestContent])
+  // Derive key voices from article authors
+  const keyVoices = useMemo(() => {
+    if (!activePerspective?.articles) return []
+    const authors = activePerspective.articles.map((a) => a.author)
+    return [...new Set(authors)] // Remove duplicates
+  }, [activePerspective])
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 flex flex-col">
@@ -93,13 +77,13 @@ export default function KeyIssueCard({ topic, onVoiceClick, commentators, latest
       </div>
 
       {/* Key Voices */}
-      {activePerspective.keyVoices && activePerspective.keyVoices.length > 0 && (
+      {keyVoices.length > 0 && (
         <div className="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
           <p className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-2">
             Key Voices
           </p>
           <div className="flex flex-wrap gap-2">
-            {activePerspective.keyVoices.map((voice) => (
+            {keyVoices.map((voice) => (
               <button
                 key={voice}
                 onClick={() => onVoiceClick?.(voice)}
@@ -112,23 +96,23 @@ export default function KeyIssueCard({ topic, onVoiceClick, commentators, latest
         </div>
       )}
 
-      {/* Key Opinions */}
-      {keyOpinions.length > 0 && (
+      {/* Key Opinions (Articles) */}
+      {activePerspective.articles && activePerspective.articles.length > 0 ? (
         <div className="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
           <p className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-2">
             Key Opinions
           </p>
           <div className="space-y-2">
-            {keyOpinions.map(({ name, article }) => (
+            {activePerspective.articles.map((article) => (
               <a
-                key={name}
+                key={article.url}
                 href={article.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block p-2 -mx-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors group"
               >
                 <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-0.5">
-                  {name}
+                  {article.author}
                 </p>
                 <p className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors line-clamp-2">
                   {article.title}
@@ -144,6 +128,15 @@ export default function KeyIssueCard({ topic, onVoiceClick, commentators, latest
               </a>
             ))}
           </div>
+        </div>
+      ) : (
+        <div className="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+          <p className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-2">
+            Key Opinions
+          </p>
+          <p className="text-xs text-gray-400 dark:text-gray-500 italic">
+            No recent articles found for this perspective
+          </p>
         </div>
       )}
     </div>

@@ -86,7 +86,6 @@ function App() {
         <KeyIssuesHero
           onCommentatorSelect={setSelected}
           commentators={data}
-          latestContent={latestContent}
         />
 
         {/* Bias Spectrum */}

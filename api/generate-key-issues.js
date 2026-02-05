@@ -76,21 +76,49 @@ function getBaseUrl(req) {
   return `${protocol}://${host}`
 }
 
+// Build a lookup map from article IDs to full article data
+// IDs are generated per-category to match formatContentForPrompt
+function buildArticleLookup(aggregatedContent) {
+  const lookup = {}
+
+  for (const [category, commentators] of Object.entries(aggregatedContent)) {
+    let categoryCounter = 1
+    for (const commentator of commentators) {
+      for (const article of commentator.articles.slice(0, 3)) {
+        const articleId = `${category}-${categoryCounter++}`
+        lookup[articleId] = {
+          id: articleId,
+          author: commentator.name,
+          title: article.title,
+          url: article.url,
+          description: article.description ? article.description.substring(0, 300) : '',
+          pubDate: article.pubDate
+        }
+      }
+    }
+  }
+
+  return lookup
+}
+
 async function generateKeyIssues(aggregatedContent) {
   const client = new Anthropic()
 
-  // Format content for the prompt
+  // Build article lookup for resolving IDs later
+  const articleLookup = buildArticleLookup(aggregatedContent)
+
+  // Format content for the prompt with article IDs
   const contentSummary = formatContentForPrompt(aggregatedContent)
 
   const response = await client.messages.create({
     model: 'claude-3-5-haiku-latest',
-    max_tokens: 2000,
+    max_tokens: 3000,
     messages: [
       {
         role: 'user',
         content: `You are analyzing recent political commentary content to identify the top 2-3 key issues being discussed across the political spectrum.
 
-Here is a summary of recent articles from political commentators grouped by political lean:
+Here is a summary of recent articles from political commentators grouped by political lean. Each article has a unique ID in brackets:
 
 ${contentSummary}
 
@@ -100,9 +128,13 @@ Based on this content, identify 2-3 trending political topics that are being dis
 3. Summarize what LEFT-leaning commentators are saying (2-3 sentences)
 4. Summarize what CENTER/moderate commentators are saying (2-3 sentences)
 5. Summarize what RIGHT-leaning commentators are saying (2-3 sentences)
-6. List 1-2 key voices from each perspective (use actual names from the content when possible)
+6. For each perspective, select 1-2 SPECIFIC ARTICLES (by their IDs) that directly relate to that topic
 
-IMPORTANT: If a perspective doesn't have relevant content on a topic, provide a general summary of what that political lean typically says about such topics.
+IMPORTANT RULES:
+- Only select articles that ACTUALLY DISCUSS the topic - don't pick random articles
+- If no articles from a perspective discuss the topic, return an empty articleIds array
+- If a perspective doesn't have relevant content, still provide a general summary of what that political lean typically says
+- Use the exact article IDs provided in brackets (e.g., "left-1", "center-3", "right-5")
 
 Respond in this exact JSON format:
 {
@@ -114,15 +146,15 @@ Respond in this exact JSON format:
       "perspectives": {
         "left": {
           "summary": "What left-leaning commentators are saying...",
-          "keyVoices": ["Name1", "Name2"]
+          "articleIds": ["left-1", "left-3"]
         },
         "center": {
           "summary": "What centrist commentators are saying...",
-          "keyVoices": ["Name1"]
+          "articleIds": ["center-2"]
         },
         "right": {
           "summary": "What right-leaning commentators are saying...",
-          "keyVoices": ["Name1", "Name2"]
+          "articleIds": ["right-1", "right-4"]
         }
       }
     }
@@ -150,12 +182,33 @@ Only respond with valid JSON, no other text.`
     }
   }
 
+  // Post-process: resolve articleIds to full article objects
+  const topics = parsed.topics.map((topic, index) => {
+    const processedPerspectives = {}
+
+    for (const [perspective, data] of Object.entries(topic.perspectives)) {
+      const articleIds = data.articleIds || []
+      const articles = articleIds
+        .map((id) => articleLookup[id])
+        .filter(Boolean)
+
+      processedPerspectives[perspective] = {
+        summary: data.summary,
+        articles
+      }
+    }
+
+    return {
+      id: topic.id || `topic-${index + 1}`,
+      title: topic.title,
+      description: topic.description,
+      perspectives: processedPerspectives
+    }
+  })
+
   return {
     generatedAt: new Date().toISOString(),
-    topics: parsed.topics.map((topic, index) => ({
-      ...topic,
-      id: topic.id || `topic-${index + 1}`
-    }))
+    topics
   }
 }
 
@@ -167,10 +220,12 @@ function formatContentForPrompt(aggregatedContent) {
 
     const label = category.toUpperCase()
     const articles = []
+    let categoryCounter = 1
 
     for (const commentator of commentators) {
       for (const article of commentator.articles.slice(0, 3)) {
-        articles.push(`- ${commentator.name}: "${article.title}"${article.description ? ` - ${article.description.substring(0, 200)}` : ''}`)
+        const articleId = `${category}-${categoryCounter++}`
+        articles.push(`[${articleId}] ${commentator.name}: "${article.title}"${article.description ? ` - ${article.description.substring(0, 200)}` : ''}`)
       }
     }
 

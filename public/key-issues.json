@@ -8,15 +8,53 @@
       "perspectives": {
         "left": {
           "summary": "Progressive commentators argue the Fed should prioritize employment over inflation concerns, noting that rate hikes disproportionately impact working-class Americans and small businesses while benefiting large financial institutions.",
-          "keyVoices": ["David Pakman", "Kyle Kulinski"]
+          "articles": [
+            {
+              "author": "David Pakman",
+              "title": "Why the Fed Is Failing Workers",
+              "url": "https://example.com/pakman-fed",
+              "description": "Analysis of how Federal Reserve policy decisions affect working-class Americans differently than wealthy investors...",
+              "pubDate": "2026-02-03T10:00:00Z"
+            },
+            {
+              "author": "Kyle Kulinski",
+              "title": "The Fed's Class War Against Workers",
+              "url": "https://example.com/kulinski-fed",
+              "description": "Breaking down the real impact of interest rate policy on everyday Americans...",
+              "pubDate": "2026-02-02T14:00:00Z"
+            }
+          ]
         },
         "center": {
           "summary": "Centrist analysts emphasize the Fed's difficult balancing act, acknowledging both inflation risks and growth concerns. They generally support data-driven decisions and warn against politicizing monetary policy.",
-          "keyVoices": ["Matt Yglesias", "Ezra Klein"]
+          "articles": [
+            {
+              "author": "Matt Yglesias",
+              "title": "The Fed's Impossible Balancing Act",
+              "url": "https://example.com/yglesias-fed",
+              "description": "Why the Federal Reserve faces no easy choices in the current economic environment...",
+              "pubDate": "2026-02-03T08:00:00Z"
+            }
+          ]
         },
         "right": {
           "summary": "Conservative voices blame previous stimulus spending for current inflation, arguing the Fed waited too long to raise rates. They advocate for tighter monetary policy and reduced government spending.",
-          "keyVoices": ["Ben Shapiro", "Dan Bongino"]
+          "articles": [
+            {
+              "author": "Ben Shapiro",
+              "title": "Inflation Is a Government-Made Crisis",
+              "url": "https://example.com/shapiro-fed",
+              "description": "How decades of irresponsible spending created the inflation crisis we face today...",
+              "pubDate": "2026-02-03T12:00:00Z"
+            },
+            {
+              "author": "Dan Bongino",
+              "title": "Biden's Fed Is Destroying Your Savings",
+              "url": "https://example.com/bongino-fed",
+              "description": "The real story behind inflation and what it means for your wallet...",
+              "pubDate": "2026-02-02T16:00:00Z"
+            }
+          ]
         }
       }
     },
@@ -27,15 +65,46 @@
       "perspectives": {
         "left": {
           "summary": "Left-leaning commentators focus on worker displacement concerns and corporate accountability. They support strong regulations on AI training data, algorithmic bias audits, and protections for creative workers.",
-          "keyVoices": ["Krystal Ball", "Ana Kasparian"]
+          "articles": [
+            {
+              "author": "Krystal Ball",
+              "title": "Big Tech's AI Power Grab Must Be Stopped",
+              "url": "https://example.com/ball-ai",
+              "description": "Why Congress needs to act now to protect workers and creators from unregulated AI...",
+              "pubDate": "2026-02-03T09:00:00Z"
+            }
+          ]
         },
         "center": {
           "summary": "Moderate voices advocate for balanced regulation that protects consumers without stifling innovation. They emphasize international competitiveness while supporting transparency requirements and liability frameworks.",
-          "keyVoices": ["Destiny", "Coleman Hughes"]
+          "articles": [
+            {
+              "author": "Destiny",
+              "title": "The AI Regulation Debate Needs More Nuance",
+              "url": "https://example.com/destiny-ai",
+              "description": "Breaking down the competing interests in the AI regulation debate...",
+              "pubDate": "2026-02-02T20:00:00Z"
+            },
+            {
+              "author": "Coleman Hughes",
+              "title": "How to Regulate AI Without Killing Innovation",
+              "url": "https://example.com/hughes-ai",
+              "description": "A balanced approach to AI governance that protects both consumers and progress...",
+              "pubDate": "2026-02-01T15:00:00Z"
+            }
+          ]
         },
         "right": {
           "summary": "Conservative commentators warn against overregulation that could push AI development overseas. They prefer industry self-regulation and express concern about government censorship through AI content policies.",
-          "keyVoices": ["Tim Pool", "Joe Rogan"]
+          "articles": [
+            {
+              "author": "Tim Pool",
+              "title": "Government AI Regulation Is Really About Censorship",
+              "url": "https://example.com/pool-ai",
+              "description": "Why the push for AI regulation is really about controlling speech...",
+              "pubDate": "2026-02-03T11:00:00Z"
+            }
+          ]
         }
       }
     },
@@ -46,15 +115,53 @@
       "perspectives": {
         "left": {
           "summary": "Progressive voices emphasize humanitarian concerns and the economic contributions of immigrants. They criticize enforcement-only approaches and advocate for pathways to citizenship and asylum reform.",
-          "keyVoices": ["Hasan Piker", "Sam Seder"]
+          "articles": [
+            {
+              "author": "Hasan Piker",
+              "title": "The Border Crisis Is a Manufactured Panic",
+              "url": "https://example.com/piker-border",
+              "description": "Examining the real facts behind the border narrative...",
+              "pubDate": "2026-02-02T18:00:00Z"
+            },
+            {
+              "author": "Sam Seder",
+              "title": "Immigration Economics 101",
+              "url": "https://example.com/seder-border",
+              "description": "What the data actually says about immigration's impact on the economy...",
+              "pubDate": "2026-02-01T12:00:00Z"
+            }
+          ]
         },
         "center": {
           "summary": "Centrist commentators acknowledge the need for both border security and immigration reform. They support bipartisan compromise solutions that address enforcement while creating legal pathways.",
-          "keyVoices": ["Josh Barro", "Nate Silver"]
+          "articles": [
+            {
+              "author": "Josh Barro",
+              "title": "Why the Border Deal Failed and What Comes Next",
+              "url": "https://example.com/barro-border",
+              "description": "Analysis of the failed bipartisan border negotiations...",
+              "pubDate": "2026-02-03T07:00:00Z"
+            }
+          ]
         },
         "right": {
           "summary": "Conservative commentators prioritize border security and enforcement, arguing current policies encourage illegal crossings. They advocate for stricter asylum rules, wall construction, and deportation of visa overstays.",
-          "keyVoices": ["Steven Crowder", "Matt Walsh"]
+          "articles": [
+            {
+              "author": "Steven Crowder",
+              "title": "The Border Crisis Democrats Don't Want You to See",
+              "url": "https://example.com/crowder-border",
+              "description": "Exposing the reality at the southern border...",
+              "pubDate": "2026-02-03T14:00:00Z"
+            },
+            {
+              "author": "Matt Walsh",
+              "title": "Why Open Borders Is National Suicide",
+              "url": "https://example.com/walsh-border",
+              "description": "The case for strong border enforcement and immigration limits...",
+              "pubDate": "2026-02-02T10:00:00Z"
+            }
+          ]
         }
       }
     }
