@@ -183,9 +183,12 @@ async function fetchYoutubeVideoViaRss(channelId) {
   }
 }
 
-async function fetchYoutubeVideo(youtubeUrl) {
-  // Step 1: Get channel ID (from cache or API)
-  const channelId = await resolveChannelId(youtubeUrl)
+async function fetchYoutubeVideo(youtubeUrl, preloadedChannelId) {
+  // Step 1: Use preloaded channel ID if available, otherwise resolve via API
+  let channelId = preloadedChannelId
+  if (!channelId) {
+    channelId = await resolveChannelId(youtubeUrl)
+  }
   if (!channelId) {
     return null
   }
@@ -255,7 +258,7 @@ export default function useLatestContent(data) {
 
     const fetches = peopleToFetch.map(async (person) => {
       const [ytResult, ssResult] = await Promise.allSettled([
-        person.youtubeUrl ? fetchYoutubeVideo(person.youtubeUrl) : Promise.resolve(null),
+        person.youtubeUrl ? fetchYoutubeVideo(person.youtubeUrl, person.youtubeChannelId) : Promise.resolve(null),
         person.substackUrl ? fetchSubstackArticle(person.substackUrl) : Promise.resolve(null),
       ])
 
