@@ -1,7 +1,7 @@
 import useKeyIssues from '../hooks/useKeyIssues'
 import KeyIssueCard from './KeyIssueCard'
 
-export default function KeyIssuesHero({ onCommentatorSelect, commentators }) {
+export default function KeyIssuesHero({ onCommentatorSelect, commentators, latestContent }) {
   const { data, loading, error } = useKeyIssues()
 
   const handleVoiceClick = (voiceName) => {
@@ -88,6 +88,8 @@ export default function KeyIssuesHero({ onCommentatorSelect, commentators }) {
             key={topic.id}
             topic={topic}
             onVoiceClick={handleVoiceClick}
+            commentators={commentators}
+            latestContent={latestContent}
           />
         ))}
       </div>

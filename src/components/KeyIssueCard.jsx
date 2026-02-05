@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 
 const PERSPECTIVES = [
   { key: 'left', label: 'Left', color: 'blue' },
@@ -6,9 +6,32 @@ const PERSPECTIVES = [
   { key: 'right', label: 'Right', color: 'red' }
 ]
 
-export default function KeyIssueCard({ topic, onVoiceClick }) {
-  const [activeTab, setActiveTab] = useState('left')
+export default function KeyIssueCard({ topic, onVoiceClick, commentators, latestContent }) {
+  const [activeTab, setActiveTab] = useState('center')
   const activePerspective = topic.perspectives[activeTab]
+
+  // Get articles for key voices in the active perspective
+  const keyOpinions = useMemo(() => {
+    if (!activePerspective?.keyVoices || !commentators || !latestContent) return []
+
+    return activePerspective.keyVoices
+      .map((voiceName) => {
+        const commentator = commentators.find(
+          (c) => c.name.toLowerCase() === voiceName.toLowerCase()
+        )
+        if (!commentator) return null
+
+        const content = latestContent[commentator.id]
+        const article = content?.substackArticle
+        if (!article) return null
+
+        return {
+          name: commentator.name,
+          article
+        }
+      })
+      .filter(Boolean)
+  }, [activePerspective, commentators, latestContent])
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 flex flex-col">
@@ -84,6 +107,41 @@ export default function KeyIssueCard({ topic, onVoiceClick }) {
               >
                 {voice}
               </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Key Opinions */}
+      {keyOpinions.length > 0 && (
+        <div className="mt-4 pt-3 border-t border-gray-100 dark:border-gray-700">
+          <p className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-2">
+            Key Opinions
+          </p>
+          <div className="space-y-2">
+            {keyOpinions.map(({ name, article }) => (
+              <a
+                key={name}
+                href={article.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block p-2 -mx-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors group"
+              >
+                <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-0.5">
+                  {name}
+                </p>
+                <p className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors line-clamp-2">
+                  {article.title}
+                </p>
+                {article.pubDate && (
+                  <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">
+                    {new Date(article.pubDate).toLocaleDateString('en-US', {
+                      month: 'short',
+                      day: 'numeric'
+                    })}
+                  </p>
+                )}
+              </a>
             ))}
           </div>
         </div>
