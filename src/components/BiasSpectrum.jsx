@@ -1,8 +1,41 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { getScorePosition, parseScore } from './ScoreBadge'
 
 export default function BiasSpectrum({ data, onSelect }) {
   const [hoveredId, setHoveredId] = useState(null)
+
+  // Calculate stacking offsets for dots at the same position
+  const stackedData = useMemo(() => {
+    const positionGroups = {}
+
+    // Group by position (rounded to avoid floating point issues)
+    data.forEach((person) => {
+      const position = Math.round(getScorePosition(person.score) * 10) / 10
+      if (!positionGroups[position]) {
+        positionGroups[position] = []
+      }
+      positionGroups[position].push(person)
+    })
+
+    // Assign stack index to each person
+    const result = new Map()
+    Object.values(positionGroups).forEach((group) => {
+      group.forEach((person, index) => {
+        result.set(person.id, { stackIndex: index, stackSize: group.length })
+      })
+    })
+
+    return result
+  }, [data])
+
+  // Calculate container height based on max stack
+  const maxStack = useMemo(() => {
+    let max = 1
+    stackedData.forEach(({ stackSize }) => {
+      if (stackSize > max) max = stackSize
+    })
+    return max
+  }, [stackedData])
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6">
@@ -32,24 +65,28 @@ export default function BiasSpectrum({ data, onSelect }) {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 h-3 w-0.5 bg-gray-400 dark:bg-gray-500" />
 
         {/* Dots */}
-        <div className="relative h-10 mt-1">
+        <div className="relative mt-1" style={{ height: `${Math.max(40, maxStack * 16 + 8)}px` }}>
           {data.map((person) => {
             const position = getScorePosition(person.score)
             const pct = (position / 100) * 100
             const { lean } = parseScore(person.score)
             const isHovered = hoveredId === person.id
+            const { stackIndex } = stackedData.get(person.id) || { stackIndex: 0 }
 
             let dotColor = 'bg-gray-500'
             if (lean === 'D') dotColor = 'bg-blue-500'
             if (lean === 'R') dotColor = 'bg-red-500'
 
+            // Stack dots vertically - first dot at bottom, additional dots above
+            const topOffset = 4 + stackIndex * 16
+
             return (
               <button
                 key={person.id}
-                className={`absolute top-1 -translate-x-1/2 rounded-full transition-all cursor-pointer border-2 border-white dark:border-gray-800 ${dotColor} ${
+                className={`absolute -translate-x-1/2 rounded-full transition-all cursor-pointer border-2 border-white dark:border-gray-800 ${dotColor} ${
                   isHovered ? 'w-5 h-5 z-20 shadow-lg' : 'w-3.5 h-3.5 z-10 hover:w-5 hover:h-5 hover:z-20'
                 }`}
-                style={{ left: `${pct}%` }}
+                style={{ left: `${pct}%`, top: `${topOffset}px` }}
                 onMouseEnter={() => setHoveredId(person.id)}
                 onMouseLeave={() => setHoveredId(null)}
                 onClick={() => onSelect(person)}
