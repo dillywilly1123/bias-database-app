@@ -198,7 +198,10 @@ export default function useLatestContent(data) {
       for (const r of results) {
         if (r.status === 'fulfilled' && r.value) {
           newContent[r.value.id] = r.value
-          setCachedItem(cache, r.value.id, r.value)
+          // Only cache if we got at least one piece of content
+          if (r.value.youtubeVideo || r.value.substackArticle) {
+            setCachedItem(cache, r.value.id, r.value)
+          }
         }
       }
       setCache(cache)
