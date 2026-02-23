@@ -53,7 +53,25 @@ export default function KeyIssuesHero({ onCommentatorSelect, commentators }) {
   }
 
   if (error || !data?.topics?.length) {
-    return null
+    return (
+      <section className="mb-8">
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+              Key Issues This Week
+            </h2>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
+              New perspectives are generated every Sunday
+            </p>
+          </div>
+        </div>
+        <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 text-center">
+          <p className="text-gray-500 dark:text-gray-400">
+            Fresh issue summaries will appear after the next weekly update.
+          </p>
+        </div>
+      </section>
+    )
   }
 
   const formattedDate = data.generatedAt
