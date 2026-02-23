@@ -3,7 +3,7 @@ import Anthropic from '@anthropic-ai/sdk'
 import { aggregateContent } from './lib/aggregate-content.js'
 
 const CACHE_KEY = 'key-issues-v1'
-const CACHE_TTL = 60 * 60 * 24 // 24 hours
+const CACHE_TTL = 60 * 60 * 24 * 8 // 8 days (survives until next Sunday run + buffer)
 
 // Create Redis client
 function getRedis() {
