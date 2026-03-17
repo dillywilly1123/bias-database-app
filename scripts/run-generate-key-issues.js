@@ -1,0 +1,201 @@
+/**
+ * Manual trigger for key issues generation.
+ * Run with: node scripts/run-generate-key-issues.js
+ * Requires .env.local with ANTHROPIC_API_KEY, UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN
+ */
+
+import { readFileSync } from 'fs'
+import { fileURLToPath } from 'url'
+import { dirname, join } from 'path'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+
+// Load .env.local
+const envPath = join(__dirname, '..', '.env.local')
+const envContent = readFileSync(envPath, 'utf8')
+for (const line of envContent.split('\n')) {
+  const match = line.match(/^([A-Z0-9_]+)="?([^"]*)"?\s*$/)
+  if (match) process.env[match[1]] = match[2]
+}
+
+import { Redis } from '@upstash/redis'
+import Anthropic from '@anthropic-ai/sdk'
+import { aggregateContent } from '../api/lib/aggregate-content.js'
+
+const CACHE_KEY = 'key-issues-v1'
+const CACHE_TTL = 60 * 60 * 24 * 8 // 8 days
+
+function buildArticleLookup(aggregatedContent) {
+  const lookup = {}
+  for (const [category, commentators] of Object.entries(aggregatedContent)) {
+    let categoryCounter = 1
+    for (const commentator of commentators) {
+      for (const article of commentator.articles.slice(0, 3)) {
+        const articleId = `${category}-${categoryCounter++}`
+        lookup[articleId] = {
+          id: articleId,
+          author: commentator.name,
+          title: article.title,
+          url: article.url,
+          description: article.description ? article.description.substring(0, 300) : '',
+          pubDate: article.pubDate
+        }
+      }
+    }
+  }
+  return lookup
+}
+
+function formatContentForPrompt(aggregatedContent) {
+  const sections = []
+  for (const [category, commentators] of Object.entries(aggregatedContent)) {
+    if (commentators.length === 0) continue
+    const label = category.toUpperCase()
+    const articles = []
+    let categoryCounter = 1
+    for (const commentator of commentators) {
+      for (const article of commentator.articles.slice(0, 3)) {
+        const articleId = `${category}-${categoryCounter++}`
+        articles.push(`[${articleId}] ${commentator.name}: "${article.title}"${article.description ? ` - ${article.description.substring(0, 200)}` : ''}`)
+      }
+    }
+    if (articles.length > 0) {
+      sections.push(`## ${label}-LEANING COMMENTATORS\n${articles.join('\n')}`)
+    }
+  }
+  return sections.join('\n\n')
+}
+
+async function generateKeyIssues(aggregatedContent) {
+  const client = new Anthropic()
+  const articleLookup = buildArticleLookup(aggregatedContent)
+  const contentSummary = formatContentForPrompt(aggregatedContent)
+
+  const response = await client.messages.create({
+    model: 'claude-haiku-4-5-20251001',
+    max_tokens: 3000,
+    messages: [
+      {
+        role: 'user',
+        content: `You are analyzing recent political commentary content to identify the top 2-3 key issues being discussed across the political spectrum.
+
+Here is a summary of recent articles from political commentators grouped by political lean. Each article has a unique ID in brackets:
+
+${contentSummary}
+
+Based on this content, identify 2-3 trending political topics that are being discussed across multiple perspectives. For each topic:
+1. Give it a concise title (5-10 words)
+2. Write a brief description (1 sentence) explaining the context
+3. Summarize what LEFT-leaning commentators are saying (2-3 sentences)
+4. Summarize what CENTER/moderate commentators are saying (2-3 sentences)
+5. Summarize what RIGHT-leaning commentators are saying (2-3 sentences)
+6. For each perspective, select 1-2 SPECIFIC ARTICLES (by their IDs) that directly relate to that topic
+
+IMPORTANT RULES:
+- Only select articles that ACTUALLY DISCUSS the topic - don't pick random articles
+- If no articles from a perspective discuss the topic, return an empty articleIds array
+- If a perspective doesn't have relevant content, still provide a general summary of what that political lean typically says
+- Use the exact article IDs provided in brackets (e.g., "left-1", "center-3", "right-5")
+
+Respond in this exact JSON format:
+{
+  "topics": [
+    {
+      "id": "topic-1",
+      "title": "Topic Title Here",
+      "description": "Brief context about this issue",
+      "perspectives": {
+        "left": {
+          "summary": "What left-leaning commentators are saying...",
+          "articleIds": ["left-1", "left-3"]
+        },
+        "center": {
+          "summary": "What centrist commentators are saying...",
+          "articleIds": ["center-2"]
+        },
+        "right": {
+          "summary": "What right-leaning commentators are saying...",
+          "articleIds": ["right-1", "right-4"]
+        }
+      }
+    }
+  ]
+}
+
+Only respond with valid JSON, no other text.`
+      }
+    ]
+  })
+
+  const responseText = response.content[0].text
+  let parsed
+  try {
+    parsed = JSON.parse(responseText)
+  } catch {
+    const jsonMatch = responseText.match(/\{[\s\S]*\}/)
+    if (jsonMatch) {
+      parsed = JSON.parse(jsonMatch[0])
+    } else {
+      throw new Error('Failed to parse Claude response as JSON')
+    }
+  }
+
+  const topics = parsed.topics.map((topic, index) => {
+    const processedPerspectives = {}
+    for (const [perspective, data] of Object.entries(topic.perspectives)) {
+      const articleIds = data.articleIds || []
+      const articles = articleIds.map((id) => articleLookup[id]).filter(Boolean)
+      processedPerspectives[perspective] = { summary: data.summary, articles }
+    }
+    return {
+      id: topic.id || `topic-${index + 1}`,
+      title: topic.title,
+      description: topic.description,
+      perspectives: processedPerspectives
+    }
+  })
+
+  return { generatedAt: new Date().toISOString(), topics }
+}
+
+async function main() {
+  console.log('Loading commentator data...')
+  const dataPath = join(__dirname, '..', 'public', 'data.json')
+  const commentators = JSON.parse(readFileSync(dataPath, 'utf8'))
+  console.log(`Loaded ${commentators.length} commentators`)
+
+  console.log('Aggregating RSS feeds...')
+  const aggregatedContent = await aggregateContent(commentators)
+
+  const totalArticles =
+    aggregatedContent.left.reduce((sum, c) => sum + c.articles.length, 0) +
+    aggregatedContent.center.reduce((sum, c) => sum + c.articles.length, 0) +
+    aggregatedContent.right.reduce((sum, c) => sum + c.articles.length, 0)
+
+  console.log(`Found ${totalArticles} articles total`)
+
+  if (totalArticles < 5) {
+    console.log('Not enough recent content to generate key issues (need 5+)')
+    process.exit(1)
+  }
+
+  console.log('Generating key issues with Claude...')
+  const keyIssues = await generateKeyIssues(aggregatedContent)
+  console.log(`Generated ${keyIssues.topics.length} topics`)
+
+  console.log('Storing in Redis...')
+  const redis = new Redis({
+    url: process.env.UPSTASH_REDIS_REST_URL,
+    token: process.env.UPSTASH_REDIS_REST_TOKEN
+  })
+  await redis.set(CACHE_KEY, keyIssues, { ex: CACHE_TTL })
+
+  console.log('Done! Key issues updated successfully.')
+  console.log('Generated at:', keyIssues.generatedAt)
+  keyIssues.topics.forEach((t, i) => console.log(`  ${i + 1}. ${t.title}`))
+}
+
+main().catch((err) => {
+  console.error('Error:', err.message)
+  process.exit(1)
+})
