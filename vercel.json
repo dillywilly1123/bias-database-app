@@ -1,4 +1,9 @@
 {
+  "functions": {
+    "api/generate-key-issues.js": {
+      "maxDuration": 60
+    }
+  },
   "crons": [
     {
       "path": "/api/generate-key-issues",
